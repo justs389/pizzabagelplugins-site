@@ -9,6 +9,10 @@ button { cursor: pointer; }
 @media (max-width: 760px) {
   [style*="grid-template-columns: minmax(0, 1."] { grid-template-columns: minmax(0, 1fr) !important; }
   aside[style*="position: sticky"] { position: static !important; order: -1; }
+  /* 2026-09-28 export: the buy card + new Specs card sit in a sticky wrapper div; it leads on phones */
+  div[style*="position: sticky; top: 100px"] { position: static !important; order: -1; }
+  /* About page photo is sticky beside the text on desktop; stacked on phones it must scroll away */
+  figure[style*="position: sticky"] { position: static !important; }
   header[style*="position: sticky"] { position: static !important; }
 }
 .hv1:hover{color: #e0785c;}
@@ -19,7 +23,8 @@ button { cursor: pointer; }
 .hv6:hover{background: #e0785c; border-color: #e0785c; color: #fbf7ee;}
 .hv7:hover{background: #f3e3c6;}
 .hv8:hover{color: #e0785c; border-color: #e0785c;}
-.hv9:hover{background: #e0785c;}</style><script src="https://assets.moonbase.sh/storefront/moonbase.js"></script></head><body><div style="min-height: 100vh; display: flex; flex-direction: column; font-family: 'Patrick Hand', cursive; color: #2a2622; background: #fbf7ee;">
+.hv9:hover{background: #e0785c;}
+.hv10:hover{background: #e0785c; border-color: #e0785c; box-shadow: 5px 6px 0 #2a2622;}</style><script src="https://assets.moonbase.sh/storefront/moonbase.js"></script></head><body><div style="min-height: 100vh; display: flex; flex-direction: column; font-family: 'Patrick Hand', cursive; color: #2a2622; background: #fbf7ee;">
 
   
     <div style="background: #2a2622; color: #fbf7ee; text-align: center; padding: 8px 16px; font-family: 'Patrick Hand SC', cursive; font-size: 14px; letter-spacing: .14em;">SCHMEAR IS FREE. FOREVER? FOR NOW? WHO KNOWS. GRAB IT BEFORE IT GOES BACK TO $19</div>
@@ -38,6 +43,8 @@ button { cursor: pointer; }
           <a href="/plugins/" style="padding: 6px 0; border-bottom: 3px solid transparent; color: #2a2622;">PLUGINS</a>
         
           <a href="/downloads/" style="padding: 6px 0; border-bottom: 3px solid transparent; color: #2a2622;">DOWNLOADS</a>
+        
+          <a href="/about/" style="padding: 6px 0; border-bottom: 3px solid transparent; color: #2a2622;">ABOUT</a>
         
           <a href="#" href="#" onclick="PB.account(event)" style="padding: 6px 0; border-bottom: 3px solid transparent; color: #2a2622;">MY ACCOUNT</a>
         
@@ -76,6 +83,8 @@ button { cursor: pointer; }
     
 
 
+
+    
 
     
 
@@ -187,7 +196,7 @@ button { cursor: pointer; }
       <div style="display: flex; flex-direction: column; gap: 14px;">
         <div style="display: flex; align-items: center; gap: 12px;">
           <img src="/assets/pizza-bagel-transparent-1280.png" alt="" style="width: 54px; height: 54px; display: block;">
-          <div style="font-family: 'Caveat Brush', cursive; font-size: 30px; line-height: 1; white-space: nowrap;">About me</div>
+          <a href="/about/" style="font-family: 'Caveat Brush', cursive; font-size: 30px; line-height: 1; white-space: nowrap; color: #fbf7ee;" class="hv1">About me</a>
         </div>
         <p style="margin: 0; font-size: 17px; line-height: 1.5; color: #d9d0c0; max-width: 460px; text-wrap: pretty;">I’m Justin Gammella, a platinum-selling producer, vocal producer and songwriter in Los Angeles. Pizza Bagel Plugins is me building the handful of tools I actually reach for in every session and shipping them one at a time.</p>
       </div>

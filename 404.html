@@ -9,6 +9,10 @@ button { cursor: pointer; }
 @media (max-width: 760px) {
   [style*="grid-template-columns: minmax(0, 1."] { grid-template-columns: minmax(0, 1fr) !important; }
   aside[style*="position: sticky"] { position: static !important; order: -1; }
+  /* 2026-09-28 export: the buy card + new Specs card sit in a sticky wrapper div; it leads on phones */
+  div[style*="position: sticky; top: 100px"] { position: static !important; order: -1; }
+  /* About page photo is sticky beside the text on desktop; stacked on phones it must scroll away */
+  figure[style*="position: sticky"] { position: static !important; }
   header[style*="position: sticky"] { position: static !important; }
 }
 .hv1:hover{color: #e0785c;}
@@ -19,4 +23,5 @@ button { cursor: pointer; }
 .hv6:hover{background: #e0785c; border-color: #e0785c; color: #fbf7ee;}
 .hv7:hover{background: #f3e3c6;}
 .hv8:hover{color: #e0785c; border-color: #e0785c;}
-.hv9:hover{background: #e0785c;}</style><script src="https://assets.moonbase.sh/storefront/moonbase.js"></script></head><body><div style="max-width: 720px; margin: 0 auto; padding: 96px 24px; font-family: 'Patrick Hand', cursive; color: #2a2622;"><h1 style="font-family: 'Caveat Brush', cursive; font-size: 64px; margin: 0 0 12px; font-weight: 400;">Page not found</h1><p style="font-size: 21px;">That page is not on the menu. Try the <a href="/plugins/" style="border-bottom: 2px solid #2a2622;">plugins</a> or head <a href="/" style="border-bottom: 2px solid #2a2622;">home</a>.</p></div></body></html>
+.hv9:hover{background: #e0785c;}
+.hv10:hover{background: #e0785c; border-color: #e0785c; box-shadow: 5px 6px 0 #2a2622;}</style><script src="https://assets.moonbase.sh/storefront/moonbase.js"></script></head><body><div style="max-width: 720px; margin: 0 auto; padding: 96px 24px; font-family: 'Patrick Hand', cursive; color: #2a2622;"><h1 style="font-family: 'Caveat Brush', cursive; font-size: 64px; margin: 0 0 12px; font-weight: 400;">Page not found</h1><p style="font-size: 21px;">That page is not on the menu. Try the <a href="/plugins/" style="border-bottom: 2px solid #2a2622;">plugins</a> or head <a href="/" style="border-bottom: 2px solid #2a2622;">home</a>.</p></div></body></html>

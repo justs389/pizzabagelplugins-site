@@ -18,8 +18,10 @@ button { cursor: pointer; }
 /* 2026-10-08 export (big prices, no coupon): the price row (price + REG./label column) and the
    48px bundle title are nowrap and overflow a 375px phone; let them wrap there. */
 @media (max-width: 480px) {
-  div[style*="display: flex; align-items: center; gap: 14px;"] { flex-wrap: wrap; }
+  div[style*="display: flex; align-items: center; gap: 18px;"] { flex-wrap: wrap; }
   div[style*="font-size: 48px; line-height: 1.05; white-space: nowrap"] { white-space: normal !important; }
+  /* 2026-10-08 v3 export: the detail-page title is nowrap ("The Everything Bagel" at 52px is 440px wide) */
+  h1[style*="font-weight: 400; white-space: nowrap"] { white-space: normal !important; }
 }
 .hv1:hover{color: #e0785c;}
 .hv2:hover{background: #ecd3ae;}
@@ -43,7 +45,8 @@ button { cursor: pointer; }
         <img src="/assets/pizza-bagel-transparent-1280.png" alt="Pizza Bagel Plugins" style="width: 46px; height: 46px; display: block;">
         <div style="font-family: 'Patrick Hand SC', cursive; font-size: 22px; letter-spacing: .12em; line-height: 1; white-space: nowrap;">PIZZA BAGEL PLUGINS</div>
       </a>
-      <nav style="display: flex; gap: 26px; flex-wrap: wrap; margin-left: auto; font-family: 'Patrick Hand SC', cursive; font-size: 17px; letter-spacing: .12em;">
+      <div style="margin-left: auto; display: flex; align-items: center; justify-content: flex-end; gap: 12px 26px; flex-wrap: wrap;">
+      <nav style="display: flex; gap: 26px; flex-wrap: wrap; font-family: 'Patrick Hand SC', cursive; font-size: 17px; letter-spacing: .12em;">
         
           <a href="/" style="padding: 6px 0; border-bottom: 3px solid transparent; color: #2a2622;">HOME</a>
         
@@ -60,6 +63,7 @@ button { cursor: pointer; }
         <span>CART</span>
         <span data-moonbase-render="cart.item_count" style="min-width: 20px; height: 20px; border-radius: 50%; background: #e0785c; color: #fbf7ee; display: grid; place-items: center; font-size: 13px;">0</span>
       </div>
+      </div>
     </div>
   </header>
 
@@ -67,7 +71,7 @@ button { cursor: pointer; }
     <div style="max-width: 1120px; margin: 0 auto; padding: 22px 24px; display: flex; align-items: center; justify-content: space-between; gap: 16px 32px; flex-wrap: wrap;">
       <div style="display: flex; flex-direction: column; gap: 6px;">
         <div style="font-family: 'Caveat Brush', cursive; font-size: clamp(40px, 5.5vw, 64px); line-height: .95; color: #fbf7ee; text-shadow: 3px 3px 0 #2a2622;">Intro prices, for now.</div>
-        <div style="font-family: 'Patrick Hand SC', cursive; font-size: 18px; letter-spacing: .12em; color: #2a2622;">LIMITED TIME ONLY. WHEN IT ENDS, PRICES GO BACK UP.</div>
+        <div style="font-family: 'Patrick Hand SC', cursive; font-size: 18px; letter-spacing: .12em; color: #2a2622; text-wrap: balance;">LIMITED TIME ONLY. WHEN IT ENDS, PRICES GO BACK UP.</div>
       </div>
       <div style="display: flex; align-items: center; gap: 14px 24px; flex-wrap: wrap;">
         <div style="display: flex; align-items: center; gap: 10px; font-family: 'Patrick Hand SC', cursive; transform: rotate(-2deg);">
@@ -120,16 +124,16 @@ button { cursor: pointer; }
           <div style="position: sticky; top: 100px; display: flex; flex-direction: column; gap: 24px;">
           <aside style="border: 3px solid #2a2622; background: #fbf7ee; box-shadow: 6px 7px 0 #ecd3ae; padding: 26px; display: flex; flex-direction: column; gap: 18px;">
             <div style="display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap;">
-              <h1 style="margin: 0; font-family: 'Caveat Brush', cursive; font-size: 52px; line-height: 1; font-weight: 400;">The Everything Bagel</h1>
-              <div style="font-size: 19px; color: #8a8378;">bundle</div>
+              <h1 style="margin: 0; font-family: 'Caveat Brush', cursive; font-size: 52px; line-height: 1.05; font-weight: 400; white-space: nowrap;">The Everything Bagel</h1>
+              <div style="font-size: 19px; color: #8a8378; white-space: nowrap;">bundle</div>
             </div>
             <p style="margin: 0; font-size: 17px; line-height: 1.45; color: #4a443d; text-wrap: pretty;">JJG Vocals, Salt and Schmear together. Everything so far, one price, and every plugin we add later at a discount for bundle owners.</p>
-            <div style="display: flex; align-items: center; flex-wrap: wrap; gap: 8px 12px;">
-                <span style="font-family: 'Caveat Brush', cursive; font-size: 76px; line-height: .85; color: #e0785c; white-space: nowrap;">$60</span>
+            <div style="display: flex; align-items: center; flex-wrap: wrap; gap: 8px 18px;">
                 <span style="display: flex; flex-direction: column; align-items: flex-start; gap: 5px; font-family: 'Patrick Hand SC', cursive; letter-spacing: .1em; white-space: nowrap;">
                   <span style="display: flex; align-items: baseline; gap: 6px; font-size: 17px; line-height: 1; color: #6b645b;">REG. <span style="position: relative; display: inline-block; padding: 0 2px; font-family: 'Caveat Brush', cursive; font-size: 36px; letter-spacing: 0; color: #6b645b;" class="af1">$180</span></span>
                   <span style="font-size: 14px; line-height: 1; padding: 4px 8px 3px; background: #2a2622; color: #fbf7ee;">INTRO PRICE · SAVE $120</span>
                 </span>
+                <span style="font-family: 'Caveat Brush', cursive; font-size: 64px; line-height: .85; color: #e0785c; white-space: nowrap;">$60</span>
             </div>
             
               <div onclick="PB.call(M =&gt; M.add_to_cart({ bundle_id: &#x27;get-em-all&#x27;, show_cart: true }), event)" style="padding: 14px 20px; text-align: center; background: #2a2622; color: #fbf7ee; border: 2.5px solid #2a2622; font-family: 'Patrick Hand SC', cursive; font-size: 18px; letter-spacing: .12em; cursor: pointer; user-select: none;" class="hv4">ADD TO CART · $60</div>

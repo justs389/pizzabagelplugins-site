@@ -15,6 +15,12 @@ button { cursor: pointer; }
   figure[style*="position: sticky"] { position: static !important; }
   header[style*="position: sticky"] { position: static !important; }
 }
+/* 2026-10-08 export (big prices, no coupon): the price row (price + REG./label column) and the
+   48px bundle title are nowrap and overflow a 375px phone; let them wrap there. */
+@media (max-width: 480px) {
+  div[style*="display: flex; align-items: center; gap: 14px;"] { flex-wrap: wrap; }
+  div[style*="font-size: 48px; line-height: 1.05; white-space: nowrap"] { white-space: normal !important; }
+}
 .hv1:hover{color: #e0785c;}
 .hv2:hover{background: #ecd3ae;}
 .hv3:hover{background: #fbf7ee; color: #2a2622;}
@@ -24,4 +30,5 @@ button { cursor: pointer; }
 .hv7:hover{background: #f3e3c6;}
 .hv8:hover{color: #e0785c; border-color: #e0785c;}
 .hv9:hover{background: #e0785c;}
-.hv10:hover{background: #e0785c; border-color: #e0785c; box-shadow: 5px 6px 0 #2a2622;}</style><script src="https://assets.moonbase.sh/storefront/moonbase.js"></script></head><body><div style="max-width: 720px; margin: 0 auto; padding: 96px 24px; font-family: 'Patrick Hand', cursive; color: #2a2622;"><h1 style="font-family: 'Caveat Brush', cursive; font-size: 64px; margin: 0 0 12px; font-weight: 400;">Page not found</h1><p style="font-size: 21px;">That page is not on the menu. Try the <a href="/plugins/" style="border-bottom: 2px solid #2a2622;">plugins</a> or head <a href="/" style="border-bottom: 2px solid #2a2622;">home</a>.</p></div></body></html>
+.hv10:hover{background: #e0785c; border-color: #e0785c; box-shadow: 5px 6px 0 #2a2622;}
+.af1::after{content: ''; position: absolute; left: -3px; right: -3px; top: 52%; height: 3px; border-radius: 2px; background: #c8392b; transform: rotate(-16deg);}</style><script src="https://assets.moonbase.sh/storefront/moonbase.js"></script></head><body><div style="max-width: 720px; margin: 0 auto; padding: 96px 24px; font-family: 'Patrick Hand', cursive; color: #2a2622;"><h1 style="font-family: 'Caveat Brush', cursive; font-size: 64px; margin: 0 0 12px; font-weight: 400;">Page not found</h1><p style="font-size: 21px;">That page is not on the menu. Try the <a href="/plugins/" style="border-bottom: 2px solid #2a2622;">plugins</a> or head <a href="/" style="border-bottom: 2px solid #2a2622;">home</a>.</p></div></body></html>

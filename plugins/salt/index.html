@@ -233,7 +233,7 @@ button { cursor: pointer; }
         <div style="font-size: 12px; letter-spacing: .18em; color: #8a8378; margin-bottom: 4px;">INFO</div>
         <a href="/faq/" style="color: #fbf7ee;" class="hv1">FAQ</a>
         <a href="/contact/" style="color: #fbf7ee;" class="hv1">CONTACT US</a>
-        <a href="/privacy/" style="color: #fbf7ee;" class="hv1">PRIVACY POLICY</a>
+        <a href="/privacy/" style="color: #fbf7ee;" class="hv1">PRIVACY POLICY</a><a href="#" onclick="PBC.open(event)" style="color: #fbf7ee;" class="hv1">COOKIE SETTINGS</a>
         <a href="/eula/" style="color: #fbf7ee;" class="hv1">LICENSE AGREEMENT</a>
       </div>
       <div style="display: flex; flex-direction: column; gap: 10px; font-family: 'Patrick Hand SC', cursive; font-size: 15px; letter-spacing: .12em;">
@@ -294,5 +294,92 @@ window.PB = {
 };
 window.addEventListener('message', function(e){ var d=e.data; if(d){ if(d.type==='pbp-height'){ var f=document.querySelector('iframe.pbp-demo'); if(f){ if(f.src.indexOf(e.origin)===0){ f.style.height=Math.ceil(d.height)+'px'; } } } } });
 PB.boot();
+</script>
+<script>window.PB_VIEW = {"content_ids": ["salt"], "content_name": "Salt", "content_type": "product", "value": 19, "currency": "USD"};</script>
+<style>
+#pb-consent{position:fixed;left:16px;bottom:16px;z-index:900;max-width:400px;box-sizing:border-box;background:#fbf7ee;color:#2a2622;border:3px solid #2a2622;box-shadow:6px 7px 0 #ecd3ae;padding:18px 20px;font-family:'Patrick Hand',cursive;display:flex;flex-direction:column;gap:10px}
+#pb-consent p{margin:0;font-size:17px;line-height:1.4;color:#4a443d}
+#pb-consent a{border-bottom:2px solid #2a2622}
+#pb-consent .pbc-row{display:flex;gap:10px;flex-wrap:wrap}
+#pb-consent button{font-family:'Patrick Hand SC',cursive;font-size:15px;letter-spacing:.12em;padding:10px 18px;border:2.5px solid #2a2622;cursor:pointer}
+#pb-consent .pbc-yes{background:#2a2622;color:#fbf7ee}
+#pb-consent .pbc-yes:hover{background:#e0785c;border-color:#e0785c}
+#pb-consent .pbc-no{background:transparent;color:#2a2622}
+#pb-consent .pbc-no:hover{color:#e0785c;border-color:#e0785c}
+@media (max-width:480px){#pb-consent{left:12px;right:12px;bottom:12px;max-width:none}}
+</style>
+<div id="pb-consent" role="dialog" aria-label="Cookie choice" hidden>
+  <div style="font-family:'Caveat Brush',cursive;font-size:30px;line-height:1;">We value your privacy</div>
+  <p>We and our partners use cookies to see how people find us and to show more relevant ads. Accept to allow them. Decline and we only use the cookies the site needs to work. <a href="/privacy/">Privacy policy</a></p>
+  <div class="pbc-row"><button type="button" class="pbc-yes" onclick="PBC.choose('yes')">ACCEPT</button><button type="button" class="pbc-no" onclick="PBC.choose('no')">DECLINE</button></div>
+</div>
+<script>
+window.PBC = (function () {
+  var KEY = 'pbp-consent', ID = '4608922252767901', loaded = false, hooked = false, tries = 0;
+  function get() { try { return localStorage.getItem(KEY); } catch (e) { return null; } }
+  function put(v) { try { localStorage.setItem(KEY, v); } catch (e) {} }
+  function box() { return document.getElementById('pb-consent'); }
+  function send(kind, name, data) { if (loaded) { try { window.fbq(kind, name, data || {}); } catch (e) {} } }
+  function items(order, cur) {
+    var out = [], list = (order ? order.items : null) || [];
+    for (var i = 0; i < list.length; i++) {
+      var it = list[i], p = it.product || it.bundle || {}, price;
+      if (it.total) { if (it.total.due) price = it.total.due.amount; }
+      if (price === undefined) { if (it.price) price = it.price[cur]; }
+      out.push({ id: p.id, name: p.name, quantity: it.quantity || 1, item_price: price });
+    }
+    return out;
+  }
+  function ids(list) { var r = []; for (var i = 0; i < list.length; i++) r.push(list[i].id); return r; }
+  function hook() {
+    if (hooked) return;
+    var M = window.Moonbase;
+    if (!M || !window.PB || !PB.ready || typeof M.on !== 'function') { if (tries++ < 60) setTimeout(hook, 250); return; }
+    hooked = true;
+    M.on('added-to-cart', function (e) {
+      var it = e.item || {}, p = it.product || it.bundle || {}, cur = e.currency, unit = it.price ? it.price[cur] : undefined;
+      send('track', 'AddToCart', { currency: cur, value: unit === undefined ? undefined : unit * (it.quantity || 1), content_ids: [p.id], content_name: p.name, content_type: 'product' });
+    });
+    M.on('checkout-initiated', function (e) {
+      var cur = e.total ? e.total.currency : undefined, list = items(e.order, cur);
+      send('track', 'InitiateCheckout', { currency: cur, value: e.total ? e.total.amount : undefined, num_items: list.length, content_ids: ids(list), contents: list, content_type: 'product' });
+    });
+    M.on('checkout-completed', function (e) {
+      var due = (e.order ? (e.order.total ? e.order.total.due : null) : null) || {}, list = items(e.order, due.currency);
+      send('track', 'Purchase', { currency: due.currency, value: due.amount, num_items: list.length, content_ids: ids(list), contents: list, content_type: 'product' });
+    });
+  }
+  function load() {
+    if (loaded) return;
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    window.fbq('set', 'autoConfig', false, ID);   // no automatic button-click / metadata events
+    window.fbq('init', ID);
+    loaded = true;
+    send('track', 'PageView');
+    if (window.PB_VIEW) send('track', 'ViewContent', window.PB_VIEW);
+    hook();
+  }
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest ? e.target.closest('a') : null;
+    if (a) { if (String(a.href).indexOf('/releases/download/installer') > -1) send('trackCustom', 'DownloadInstaller'); }
+  }, true);
+  if (window.PB) { var sub = PB.subscribe; PB.subscribe = function (e, form) { send('track', 'Lead'); return sub(e, form); }; }
+  var api = {
+    choose: function (v) {
+      var was = get(); put(v); box().hidden = true;
+      if (v === 'yes') { load(); return; }
+      if (was === 'yes') {
+        document.cookie = '_fbp=; Max-Age=0; path=/';
+        document.cookie = '_fbp=; Max-Age=0; path=/; domain=.' + location.hostname.replace(/^www\./, '');
+        location.reload();
+      }
+    },
+    open: function (e) { if (e) { if (e.preventDefault) e.preventDefault(); } box().hidden = false; },
+    state: get
+  };
+  var c = get();
+  if (c === 'yes') load(); else if (c !== 'no') box().hidden = false;
+  return api;
+})();
 </script>
 </body></html>

@@ -17,12 +17,11 @@ button { cursor: pointer; }
 }
 /* 2026-10-08 export (big prices, no coupon): the price row (price + REG./label column) and the
    48px bundle title are nowrap and overflow a 375px phone; let them wrap there. */
-@media (max-width: 480px) {
-  div[style*="display: flex; align-items: center; gap: 18px;"] { flex-wrap: wrap; }
-  div[style*="font-size: 48px; line-height: 1.05; white-space: nowrap"] { white-space: normal !important; }
-  /* 2026-10-08 v3 export: the detail-page title is nowrap ("The Everything Bagel" at 52px is 440px wide) */
-  h1[style*="font-weight: 400; white-space: nowrap"] { white-space: normal !important; }
-}
+/* At any width (2026-10-12: the bundle title overflowed its card at ~500px, just above the old
+   480px rule): these only wrap when they don't fit, so desktop still matches Design exactly. */
+div[style*="display: flex; align-items: center; gap: 18px;"] { flex-wrap: wrap; }
+div[style*="font-size: 48px; line-height: 1.05; white-space: nowrap"] { white-space: normal !important; }
+h1[style*="font-weight: 400; white-space: nowrap"] { white-space: normal !important; overflow-wrap: break-word; }
 .hv1:hover{color: #e0785c;}
 .hv2:hover{background: #ecd3ae;}
 .hv3:hover{background: #fbf7ee; color: #2a2622;}

@@ -32,6 +32,9 @@ h1[style*="font-weight: 400; white-space: nowrap"] { white-space: normal !import
 .hv8:hover{color: #e0785c; border-color: #e0785c;}
 .hv9:hover{background: #e0785c;}
 .hv10:hover{background: #e0785c; border-color: #e0785c; box-shadow: 5px 6px 0 #2a2622;}
+.hv11:hover{background: #eaf0fb; color: #1b2440;}
+.hv12:hover{background: #eaf0fb; border-color: #eaf0fb;}
+.hv13:hover{background: #fbf7ee; color: #2a2622; border-color: #fbf7ee;}
 .af1::after{content: ''; position: absolute; left: -3px; right: -3px; top: 52%; height: 3px; border-radius: 2px; background: #c8392b; transform: rotate(-16deg);}</style><script src="https://assets.moonbase.sh/storefront/moonbase.js"></script></head><body><div style="min-height: 100vh; display: flex; flex-direction: column; font-family: 'Patrick Hand', cursive; color: #2a2622; background: #fbf7ee;">
 
   
@@ -129,6 +132,8 @@ h1[style*="font-weight: 400; white-space: nowrap"] { white-space: normal !import
     
 
     
+
+    
   </main>
 
   <section style="border-top: 3px solid #2a2622; background: #fbf7ee;">
@@ -156,7 +161,9 @@ h1[style*="font-weight: 400; white-space: nowrap"] { white-space: normal !import
         <div style="font-size: 12px; letter-spacing: .18em; color: #8a8378; margin-bottom: 4px;">INFO</div>
         <a href="/faq/" style="color: #fbf7ee;" class="hv1">FAQ</a>
         <a href="/contact/" style="color: #fbf7ee;" class="hv1">CONTACT US</a>
-        <a href="/privacy/" style="color: #fbf7ee;" class="hv1">PRIVACY POLICY</a><a href="#" onclick="PBC.open(event)" style="color: #fbf7ee;" class="hv1">COOKIE SETTINGS</a>
+        <a href="/privacy/" style="color: #fbf7ee;" class="hv1">PRIVACY POLICY</a>
+        <a href="/rules/" style="color: #fbf7ee;" class="hv1">PROMO RULES</a>
+        <a href="#" onclick="PBC.open(event)" style="color: #fbf7ee;" class="hv1">COOKIE SETTINGS</a>
         <a href="/eula/" style="color: #fbf7ee;" class="hv1">LICENSE AGREEMENT</a>
       </div>
       <div style="display: flex; flex-direction: column; gap: 10px; font-family: 'Patrick Hand SC', cursive; font-size: 15px; letter-spacing: .12em;">
@@ -170,7 +177,207 @@ h1[style*="font-weight: 400; white-space: nowrap"] { white-space: normal !import
       <div style="display: flex; gap: 22px; flex-wrap: wrap;"><a href="https://help.moonbase.sh/articles/3131239-general-terms-and-conditions-for-buyers" style="color: #8a8378;" class="hv1">TERMS OF SALE</a><div>HELLO@PIZZABAGELPLUGINS.COM</div></div>
     </div>
   </footer>
+
+  
 </div>
+
+<template id="pbs-closed">
+    <div onclick="PBS.close(event)" style="position: fixed; inset: 0; z-index: 60; background: rgba(42,38,34,.74); display: grid; place-items: center; padding: 24px 16px; overflow: auto; font-family: 'Patrick Hand', cursive; color: #2a2622;">
+      <div onclick="event.stopPropagation()" style="position: relative; width: min(100%, 440px); background: #fbf7ee; border: 3px solid #2a2622; box-shadow: 8px 9px 0 #2a2622; transform: rotate(-1.2deg); padding: 30px 26px 24px; display: flex; flex-direction: column; gap: 18px;">
+        <div onclick="PBS.close(event)" aria-label="Close" style="position: absolute; top: -18px; right: -18px; width: 44px; height: 44px; border-radius: 50%; background: #2a2622; color: #fbf7ee; border: 3px solid #fbf7ee; display: grid; place-items: center; font-family: 'Patrick Hand SC', cursive; font-size: 24px; line-height: 1; cursor: pointer; user-select: none; z-index: 2;" class="hv9">×</div>
+
+        
+          <div style="display: flex; flex-direction: column; gap: 6px;">
+            <div style="font-family: 'Patrick Hand SC', cursive; font-size: 13px; letter-spacing: .18em; color: #8a8378;">PIZZA BAGEL PLUGINS · PROMO</div>
+            <h2 style="margin: 0; font-family: 'Caveat Brush', cursive; font-size: 52px; line-height: .95; font-weight: 400;">Scratch and win</h2>
+            <div style="font-size: 20px; line-height: 1.35; color: #4a443d; text-wrap: pretty;">Every card wins something. Scratch to see what.</div>
+          </div>
+          <div data-scratch-area style="position: relative; height: 190px; border: 3px solid #2a2622; background: #ecd3ae; overflow: hidden; touch-action: none;">
+            
+              <div style="position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; text-align: center;">
+                <div style="font-family: 'Caveat Brush', cursive; font-size: 64px; line-height: .9; color: #2a2622;">10% off</div>
+                <div style="font-family: 'Patrick Hand SC', cursive; font-size: 16px; letter-spacing: .16em; color: #4a443d;">ANY PLUGIN</div>
+              </div>
+            
+            
+            
+            
+              <canvas data-scratch-foil style="position: absolute; inset: 0; width: 100%; height: 100%; display: block; cursor: crosshair; touch-action: none; user-select: none;"></canvas>
+            
+            
+          </div>
+          <div style="font-size: 15px; line-height: 1.45; color: #6b645b; text-wrap: pretty;">1 in 100 cards wins Salt. 1 in 1,000 wins The Everything Bagel. Everyone else gets 10% off. No purchase needed. <a href="/rules/" style="color: #2a2622; border-bottom: 2px solid #2a2622;">Rules</a></div>
+        
+
+        
+
+        
+
+        
+      </div>
+    </div>
+  </template>
+<template id="pbs-closed-salt">
+    <div onclick="PBS.close(event)" style="position: fixed; inset: 0; z-index: 60; background: rgba(42,38,34,.74); display: grid; place-items: center; padding: 24px 16px; overflow: auto; font-family: 'Patrick Hand', cursive; color: #2a2622;">
+      <div onclick="event.stopPropagation()" style="position: relative; width: min(100%, 440px); background: #fbf7ee; border: 3px solid #2a2622; box-shadow: 8px 9px 0 #2a2622; transform: rotate(-1.2deg); padding: 30px 26px 24px; display: flex; flex-direction: column; gap: 18px;">
+        <div onclick="PBS.close(event)" aria-label="Close" style="position: absolute; top: -18px; right: -18px; width: 44px; height: 44px; border-radius: 50%; background: #2a2622; color: #fbf7ee; border: 3px solid #fbf7ee; display: grid; place-items: center; font-family: 'Patrick Hand SC', cursive; font-size: 24px; line-height: 1; cursor: pointer; user-select: none; z-index: 2;" class="hv9">×</div>
+
+        
+          <div style="display: flex; flex-direction: column; gap: 6px;">
+            <div style="font-family: 'Patrick Hand SC', cursive; font-size: 13px; letter-spacing: .18em; color: #8a8378;">PIZZA BAGEL PLUGINS · PROMO</div>
+            <h2 style="margin: 0; font-family: 'Caveat Brush', cursive; font-size: 52px; line-height: .95; font-weight: 400;">Scratch and win</h2>
+            <div style="font-size: 20px; line-height: 1.35; color: #4a443d; text-wrap: pretty;">Every card wins something. Scratch to see what.</div>
+          </div>
+          <div data-scratch-area style="position: relative; height: 190px; border: 3px solid #2a2622; background: #ecd3ae; overflow: hidden; touch-action: none;">
+            
+            
+              <div style="position: absolute; inset: 0; background: #1a2749; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; text-align: center;">
+                <div style="padding: 5px 14px; background: #f0c25c; color: #1b2440; font-family: 'Patrick Hand SC', cursive; font-size: 14px; letter-spacing: .2em; line-height: 1; transform: rotate(-3deg);">A REAL WIN</div>
+                <div style="font-family: 'Caveat Brush', cursive; font-size: 66px; line-height: .9; color: #eaf0fb;">Free Salt</div>
+                <div style="font-family: 'Patrick Hand SC', cursive; font-size: 16px; letter-spacing: .16em; color: #f0c25c;">THE ENHANCER. YOURS.</div>
+              </div>
+            
+            
+            
+              <canvas data-scratch-foil style="position: absolute; inset: 0; width: 100%; height: 100%; display: block; cursor: crosshair; touch-action: none; user-select: none;"></canvas>
+            
+            
+          </div>
+          <div style="font-size: 15px; line-height: 1.45; color: #6b645b; text-wrap: pretty;">1 in 100 cards wins Salt. 1 in 1,000 wins The Everything Bagel. Everyone else gets 10% off. No purchase needed. <a href="/rules/" style="color: #2a2622; border-bottom: 2px solid #2a2622;">Rules</a></div>
+        
+
+        
+
+        
+
+        
+      </div>
+    </div>
+  </template>
+<template id="pbs-closed-bagel">
+    <div onclick="PBS.close(event)" style="position: fixed; inset: 0; z-index: 60; background: rgba(42,38,34,.74); display: grid; place-items: center; padding: 24px 16px; overflow: auto; font-family: 'Patrick Hand', cursive; color: #2a2622;">
+      <div onclick="event.stopPropagation()" style="position: relative; width: min(100%, 440px); background: #fbf7ee; border: 3px solid #2a2622; box-shadow: 8px 9px 0 #2a2622; transform: rotate(-1.2deg); padding: 30px 26px 24px; display: flex; flex-direction: column; gap: 18px;">
+        <div onclick="PBS.close(event)" aria-label="Close" style="position: absolute; top: -18px; right: -18px; width: 44px; height: 44px; border-radius: 50%; background: #2a2622; color: #fbf7ee; border: 3px solid #fbf7ee; display: grid; place-items: center; font-family: 'Patrick Hand SC', cursive; font-size: 24px; line-height: 1; cursor: pointer; user-select: none; z-index: 2;" class="hv9">×</div>
+
+        
+          <div style="display: flex; flex-direction: column; gap: 6px;">
+            <div style="font-family: 'Patrick Hand SC', cursive; font-size: 13px; letter-spacing: .18em; color: #8a8378;">PIZZA BAGEL PLUGINS · PROMO</div>
+            <h2 style="margin: 0; font-family: 'Caveat Brush', cursive; font-size: 52px; line-height: .95; font-weight: 400;">Scratch and win</h2>
+            <div style="font-size: 20px; line-height: 1.35; color: #4a443d; text-wrap: pretty;">Every card wins something. Scratch to see what.</div>
+          </div>
+          <div data-scratch-area style="position: relative; height: 190px; border: 3px solid #2a2622; background: #ecd3ae; overflow: hidden; touch-action: none;">
+            
+            
+            
+              <div style="position: absolute; inset: 0; background: #2a2622; color: #fbf7ee; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; text-align: center; overflow: hidden;">
+                <div style="position: absolute; inset: -60%; background: repeating-conic-gradient(from 0deg, rgba(251,247,238,.1) 0 9deg, transparent 9deg 18deg);"></div>
+                <div style="position: relative; padding: 5px 14px; background: #e0785c; border: 2.5px solid #fbf7ee; font-family: 'Patrick Hand SC', cursive; font-size: 14px; letter-spacing: .2em; line-height: 1; transform: rotate(-4deg);">JACKPOT</div>
+                <div style="position: relative; font-family: 'Caveat Brush', cursive; font-size: 54px; line-height: .9; text-wrap: balance;">The Everything Bagel</div>
+                <div style="position: relative; font-family: 'Patrick Hand SC', cursive; font-size: 15px; letter-spacing: .16em; color: #ecd3ae;">ALL THREE PLUGINS. FREE.</div>
+              </div>
+            
+            
+              <canvas data-scratch-foil style="position: absolute; inset: 0; width: 100%; height: 100%; display: block; cursor: crosshair; touch-action: none; user-select: none;"></canvas>
+            
+            
+          </div>
+          <div style="font-size: 15px; line-height: 1.45; color: #6b645b; text-wrap: pretty;">1 in 100 cards wins Salt. 1 in 1,000 wins The Everything Bagel. Everyone else gets 10% off. No purchase needed. <a href="/rules/" style="color: #2a2622; border-bottom: 2px solid #2a2622;">Rules</a></div>
+        
+
+        
+
+        
+
+        
+      </div>
+    </div>
+  </template>
+<template id="pbs-won-10">
+    <div onclick="PBS.close(event)" style="position: fixed; inset: 0; z-index: 60; background: rgba(42,38,34,.74); display: grid; place-items: center; padding: 24px 16px; overflow: auto; font-family: 'Patrick Hand', cursive; color: #2a2622;">
+      <div onclick="event.stopPropagation()" style="position: relative; width: min(100%, 440px); background: #fbf7ee; border: 3px solid #2a2622; box-shadow: 8px 9px 0 #2a2622; transform: rotate(-1.2deg); padding: 30px 26px 24px; display: flex; flex-direction: column; gap: 18px;">
+        <div onclick="PBS.close(event)" aria-label="Close" style="position: absolute; top: -18px; right: -18px; width: 44px; height: 44px; border-radius: 50%; background: #2a2622; color: #fbf7ee; border: 3px solid #fbf7ee; display: grid; place-items: center; font-family: 'Patrick Hand SC', cursive; font-size: 24px; line-height: 1; cursor: pointer; user-select: none; z-index: 2;" class="hv9">×</div>
+
+        
+
+        
+          <div style="display: flex; flex-direction: column; gap: 6px;">
+            <div style="font-family: 'Patrick Hand SC', cursive; font-size: 13px; letter-spacing: .18em; color: #e0785c;">YOU WON</div>
+            <h2 style="margin: 0; font-family: 'Caveat Brush', cursive; font-size: 48px; line-height: .95; font-weight: 400;">10% off, any plugin</h2>
+          </div>
+          <div data-scratch-code style="padding: 18px 16px; border: 3px dashed #2a2622; background: #ecd3ae; text-align: center; font-family: 'Patrick Hand SC', cursive; font-size: 34px; letter-spacing: .16em; line-height: 1; user-select: all; overflow-wrap: anywhere;">__CODE__</div>
+          <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+            <a href="#" data-scratch-copy style="flex: 1 1 140px; text-align: center; padding: 14px 18px; background: #fbf7ee; color: #2a2622; border: 2.5px solid #2a2622; font-family: 'Patrick Hand SC', cursive; font-size: 17px; letter-spacing: .12em; white-space: nowrap;" class="hv2">COPY CODE</a>
+            <a href="/plugins/" style="flex: 1 1 140px; text-align: center; padding: 14px 18px; background: #2a2622; color: #fbf7ee; border: 2.5px solid #2a2622; font-family: 'Patrick Hand SC', cursive; font-size: 17px; letter-spacing: .12em; white-space: nowrap;" class="hv4">SHOP THE SALE</a>
+          </div>
+          <div style="font-size: 15px; line-height: 1.45; color: #6b645b;">Enter the code at checkout. Good for 7 days.</div>
+        
+
+        
+
+        
+      </div>
+    </div>
+  </template>
+<template id="pbs-won-salt">
+    <div onclick="PBS.close(event)" style="position: fixed; inset: 0; z-index: 60; background: rgba(42,38,34,.74); display: grid; place-items: center; padding: 24px 16px; overflow: auto; font-family: 'Patrick Hand', cursive; color: #2a2622;">
+      <div onclick="event.stopPropagation()" style="position: relative; width: min(100%, 440px); background: #fbf7ee; border: 3px solid #2a2622; box-shadow: 8px 9px 0 #2a2622; transform: rotate(-1.2deg); padding: 30px 26px 24px; display: flex; flex-direction: column; gap: 18px;">
+        <div onclick="PBS.close(event)" aria-label="Close" style="position: absolute; top: -18px; right: -18px; width: 44px; height: 44px; border-radius: 50%; background: #2a2622; color: #fbf7ee; border: 3px solid #fbf7ee; display: grid; place-items: center; font-family: 'Patrick Hand SC', cursive; font-size: 24px; line-height: 1; cursor: pointer; user-select: none; z-index: 2;" class="hv9">×</div>
+
+        
+
+        
+
+        
+          <div style="margin: -30px -26px -24px; padding: 34px 26px 26px; background: #1a2749; color: #eaf0fb; display: flex; flex-direction: column; gap: 18px; position: relative;">
+            <div style="position: absolute; top: -14px; left: 22px; padding: 6px 14px; background: #f0c25c; color: #1b2440; border: 3px solid #eaf0fb; font-family: 'Patrick Hand SC', cursive; font-size: 14px; letter-spacing: .18em; line-height: 1; transform: rotate(-4deg);">A REAL WIN</div>
+            <div style="display: flex; flex-direction: column; gap: 8px; padding-top: 6px;">
+              <h2 style="margin: 0; font-family: 'Caveat Brush', cursive; font-size: 60px; line-height: .92; font-weight: 400; color: #eaf0fb;">You won Salt</h2>
+              <div style="font-size: 21px; line-height: 1.35; color: #f0c25c;">The enhancer, free. For real.</div>
+            </div>
+            <div data-scratch-code style="padding: 18px 16px; border: 3px dashed #f0c25c; background: #eaf0fb; color: #1b2440; text-align: center; font-family: 'Patrick Hand SC', cursive; font-size: 34px; letter-spacing: .16em; line-height: 1; user-select: all; overflow-wrap: anywhere;">__CODE__</div>
+            <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+              <a href="#" data-scratch-copy style="flex: 1 1 140px; text-align: center; padding: 14px 18px; background: transparent; color: #eaf0fb; border: 2.5px solid #eaf0fb; font-family: 'Patrick Hand SC', cursive; font-size: 17px; letter-spacing: .12em; white-space: nowrap;" class="hv11">COPY CODE</a>
+              <a href="/plugins/salt/" style="flex: 1 1 140px; text-align: center; padding: 14px 18px; background: #f0c25c; color: #1b2440; border: 2.5px solid #f0c25c; font-family: 'Patrick Hand SC', cursive; font-size: 17px; letter-spacing: .12em; white-space: nowrap;" class="hv12">REDEEM</a>
+            </div>
+            <div style="font-size: 15px; line-height: 1.45; color: #a9bce0;">Single-use code. Enter it at checkout and Salt is yours.</div>
+          </div>
+        
+
+        
+      </div>
+    </div>
+  </template>
+<template id="pbs-won-bagel">
+    <div onclick="PBS.close(event)" style="position: fixed; inset: 0; z-index: 60; background: rgba(42,38,34,.74); display: grid; place-items: center; padding: 24px 16px; overflow: auto; font-family: 'Patrick Hand', cursive; color: #2a2622;">
+      <div onclick="event.stopPropagation()" style="position: relative; width: min(100%, 440px); background: #fbf7ee; border: 3px solid #2a2622; box-shadow: 8px 9px 0 #2a2622; transform: rotate(-1.2deg); padding: 30px 26px 24px; display: flex; flex-direction: column; gap: 18px;">
+        <div onclick="PBS.close(event)" aria-label="Close" style="position: absolute; top: -18px; right: -18px; width: 44px; height: 44px; border-radius: 50%; background: #2a2622; color: #fbf7ee; border: 3px solid #fbf7ee; display: grid; place-items: center; font-family: 'Patrick Hand SC', cursive; font-size: 24px; line-height: 1; cursor: pointer; user-select: none; z-index: 2;" class="hv9">×</div>
+
+        
+
+        
+
+        
+
+        
+          <div style="margin: -30px -26px -24px; padding: 34px 26px 26px; background: #2a2622; color: #fbf7ee; display: flex; flex-direction: column; gap: 18px; position: relative; overflow: hidden;">
+            <div style="position: absolute; inset: -40%; background: repeating-conic-gradient(from 0deg, rgba(251,247,238,.09) 0 9deg, transparent 9deg 18deg); pointer-events: none;"></div>
+            <div style="position: absolute; top: 18px; right: -8px; padding: 8px 18px; background: #e0785c; color: #fbf7ee; border: 3px solid #fbf7ee; box-shadow: 3px 3px 0 #fbf7ee; font-family: 'Patrick Hand SC', cursive; font-size: 15px; letter-spacing: .2em; line-height: 1; transform: rotate(7deg);">JACKPOT</div>
+            <div style="position: relative; display: flex; flex-direction: column; gap: 10px; padding-right: 60px;">
+              <div style="font-family: 'Patrick Hand SC', cursive; font-size: 13px; letter-spacing: .18em; color: #ecd3ae;">1 IN 1,000. THAT’S YOU.</div>
+              <h2 style="margin: 0; font-family: 'Caveat Brush', cursive; font-size: 58px; line-height: .9; font-weight: 400; color: #fbf7ee; text-wrap: balance;">You won The Everything Bagel</h2>
+              <div style="font-size: 21px; line-height: 1.35; color: #ecd3ae; text-wrap: pretty;">JJG Vocals, Salt and Schmear. All of it. Free.</div>
+            </div>
+            <div data-scratch-code style="position: relative; padding: 18px 16px; border: 3px dashed #fbf7ee; background: #fbf7ee; color: #2a2622; text-align: center; font-family: 'Patrick Hand SC', cursive; font-size: 34px; letter-spacing: .16em; line-height: 1; user-select: all; overflow-wrap: anywhere;">__CODE__</div>
+            <div style="position: relative; display: flex; gap: 12px; flex-wrap: wrap;">
+              <a href="#" data-scratch-copy style="flex: 1 1 140px; text-align: center; padding: 14px 18px; background: transparent; color: #fbf7ee; border: 2.5px solid #fbf7ee; font-family: 'Patrick Hand SC', cursive; font-size: 17px; letter-spacing: .12em; white-space: nowrap;" class="hv3">COPY CODE</a>
+              <a href="/plugins/bundle/" style="flex: 1 1 140px; text-align: center; padding: 14px 18px; background: #e0785c; color: #fbf7ee; border: 2.5px solid #e0785c; font-family: 'Patrick Hand SC', cursive; font-size: 17px; letter-spacing: .12em; white-space: nowrap;" class="hv13">REDEEM</a>
+            </div>
+            <div style="position: relative; font-size: 15px; line-height: 1.45; color: #d9d0c0;">Single-use code. Enter it at checkout and the bundle is yours.</div>
+          </div>
+        
+      </div>
+    </div>
+  </template>
 
 <script>
 window.PB = {
@@ -303,6 +510,102 @@ window.PBC = (function () {
   var c = get();
   if (c === 'yes') load(); else if (c !== 'no') box().hidden = false;
   return api;
+})();
+</script>
+
+<style>
+/* Phone: keep the card's close button inside the viewport (Design hangs it 18px outside the card). */
+@media (max-width: 480px) { #pbs-host [aria-label="Close"] { top: -14px !important; right: -6px !important; } }
+</style>
+<script>
+window.PBS = (function () {
+  var KEY = 'pbp-scratch', API = "https://pbp-scratch.scratch-worker.workers.dev/draw", FALLBACK = 'SCRATCH10', host = null, state = null;
+  function get() { try { return JSON.parse(localStorage.getItem(KEY) || 'null'); } catch (e) { return null; } }
+  function put(v) { try { localStorage.setItem(KEY, JSON.stringify(v)); } catch (e) {} }
+  function tpl(id) { var t = document.getElementById('pbs-' + id); return t ? t.innerHTML : ''; }
+  function show(id, code) {
+    if (!host) { host = document.createElement('div'); host.id = 'pbs-host'; document.body.appendChild(host); }
+    host.innerHTML = tpl(id).split('__CODE__').join(code || '');
+    document.body.style.overflow = 'hidden';
+    var foil = host.querySelector('[data-scratch-foil]');
+    if (foil) requestAnimationFrame(function () { initFoil(foil); });
+    var copy = host.querySelector('[data-scratch-copy]');
+    if (copy) copy.onclick = function (e) { e.preventDefault(); copyCode(code, copy); };
+  }
+  function copyCode(code, el) {
+    var done = function () { var t = el.textContent; el.textContent = 'COPIED'; setTimeout(function () { el.textContent = t; }, 1600); };
+    if (navigator.clipboard) { navigator.clipboard.writeText(code).then(done, function () { fallbackCopy(code); done(); }); }
+    else { fallbackCopy(code); done(); }
+  }
+  function fallbackCopy(code) {
+    var ta = document.createElement('textarea'); ta.value = code; document.body.appendChild(ta); ta.select();
+    try { document.execCommand('copy'); } catch (e) {} document.body.removeChild(ta);
+  }
+  function close(e) {
+    if (e) { if (e.preventDefault) e.preventDefault(); }
+    if (host) { host.innerHTML = ''; }
+    document.body.style.overflow = '';
+    var s = get() || {}; if (!s.result) { s.closed = Date.now(); put(s); }
+  }
+  // Design's foil, ported: striped tomato foil with a SCRATCH HERE sticker; destination-out strokes.
+  function initFoil(c) {
+    var dpr = Math.min(2, window.devicePixelRatio || 1), w = c.clientWidth, h = c.clientHeight;
+    if (!w || !h) return;
+    c.width = w * dpr; c.height = h * dpr;
+    var x = c.getContext('2d'); x.scale(dpr, dpr);
+    x.fillStyle = '#e0785c'; x.fillRect(0, 0, w, h);
+    x.save(); x.translate(w / 2, h / 2); x.rotate(Math.PI / 4); x.fillStyle = '#cf6a4f';
+    for (var i = -w - h; i < w + h; i += 48) x.fillRect(i, -w - h, 24, 2 * (w + h));
+    x.restore();
+    x.save(); x.translate(w / 2, h / 2); x.rotate(-3 * Math.PI / 180);
+    x.font = "26px 'Patrick Hand SC', cursive"; var tw = x.measureText('SCRATCH HERE').width + 20 * .18 * 11, bw = tw + 44, bh = 46;
+    x.fillStyle = '#2a2622'; x.fillRect(-bw / 2 + 4, -bh / 2 + 4, bw, bh);
+    x.fillStyle = '#fbf7ee'; x.fillRect(-bw / 2, -bh / 2, bw, bh);
+    x.lineWidth = 3; x.strokeStyle = '#2a2622'; x.strokeRect(-bw / 2, -bh / 2, bw, bh);
+    x.fillStyle = '#2a2622'; x.textBaseline = 'middle'; x.letterSpacing = '.18em'; x.textAlign = 'center'; x.fillText('SCRATCH HERE', 4, 2);
+    x.restore();
+    x.globalCompositeOperation = 'destination-out'; x.lineCap = 'round'; x.lineJoin = 'round'; x.lineWidth = 46;
+    var last = null, down = false, done = false;
+    var pt = function (e) { var r = c.getBoundingClientRect(); return [(e.clientX - r.left) * w / r.width, (e.clientY - r.top) * h / r.height]; };
+    var cleared = function () { var d = x.getImageData(0, 0, c.width, c.height).data, n = 0, t = 0; for (var i = 3; i < d.length; i += 64) { t++; if (d[i] < 40) n++; } return n / t; };
+    var finish = function () {
+      if (done) return; done = true;
+      c.style.transition = 'opacity .45s'; c.style.opacity = '0';
+      setTimeout(function () { var s = get() || {}; show(s.result.state, s.result.code); }, 800);
+    };
+    c.onpointerdown = function (e) { down = true; last = pt(e); c.setPointerCapture(e.pointerId); x.beginPath(); x.arc(last[0], last[1], 23, 0, 7); x.fill(); };
+    c.onpointermove = function (e) { if (!down) return; var p = pt(e); x.beginPath(); x.moveTo(last[0], last[1]); x.lineTo(p[0], p[1]); x.stroke(); last = p; };
+    c.onpointerup = c.onpointercancel = function () { down = false; if (cleared() > .55) finish(); };
+  }
+  // The draw happens when the card opens, so the prize under the foil is already decided.
+  function draw() {
+    if (!API) return Promise.resolve({ state: 'won-10', code: FALLBACK });
+    return fetch(API, { method: 'POST', headers: { 'content-type': 'application/json' }, body: '{}' })
+      .then(function (r) { return r.ok ? r.json() : null; })
+      .then(function (j) { return (j && j.state && j.code) ? j : { state: 'won-10', code: FALLBACK }; })
+      .catch(function () { return { state: 'won-10', code: FALLBACK }; });
+  }
+  function open() {
+    var s = get() || {};
+    if (s.result) { show(s.result.state, s.result.code); return; }
+    draw().then(function (res) {
+      s.result = res; s.drawn = Date.now(); put(s);
+      show(res.state === 'won-salt' ? 'closed-salt' : res.state === 'won-bagel' ? 'closed-bagel' : 'closed');
+    });
+  }
+  // First visit only: open once the cookie banner is out of the way (or after 1.5 s if it never shows).
+  function maybeOpen() {
+    var s = get();
+    if (s) return;                              // already played or closed
+    if (!document.getElementById('pbs-closed')) return;
+    var banner = document.getElementById('pb-consent');
+    var go = function () { setTimeout(open, 600); };
+    if (banner) { if (banner.hidden) go(); else { var mo = new MutationObserver(function () { if (banner.hidden) { mo.disconnect(); go(); } }); mo.observe(banner, { attributes: true, attributeFilter: ['hidden'] }); } }
+    else go();
+  }
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') { if (host) { if (host.innerHTML) close(); } } });
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', maybeOpen); else maybeOpen();
+  return { open: open, close: close, state: get, reset: function () { try { localStorage.removeItem(KEY); } catch (e) {} } };
 })();
 </script>
 </body></html>

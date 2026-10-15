@@ -1,0 +1,593 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Scratch card rules · Pizza Bagel Plugins</title><link rel="canonical" href="https://pizzabagelplugins.com/rules/"><link rel="icon" type="image/png" sizes="192x192" href="/favicon.png"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><meta name="description" content="Plugins built by a producer for a quick and modern workflow. JJG Vocals, Salt and Schmear, from platinum-selling producer Justin Gammella."><meta property="og:type" content="website"><meta property="og:site_name" content="Pizza Bagel Plugins"><meta property="og:title" content="Scratch card rules · Pizza Bagel Plugins"><meta property="og:description" content="Plugins built by a producer for a quick and modern workflow. JJG Vocals, Salt and Schmear, from platinum-selling producer Justin Gammella."><meta property="og:url" content="https://pizzabagelplugins.com/rules/"><meta property="og:image" content="https://pizzabagelplugins.com/assets/pizza-bagel-trio-2200.png"><meta name="twitter:card" content="summary_large_image"><link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Patrick+Hand+SC&family=Patrick+Hand&display=swap" rel="stylesheet"><style>
+body { margin: 0; background: #fbf7ee; color: #2a2622; }
+a { color: #2a2622; text-decoration: none; } a:hover { color: #e0785c; }
+input, select, textarea, button { font-family: inherit; }
+button { cursor: pointer; }
+[hidden] { display: none !important; }
+/* The canvas is desktop-only; below tablet width collapse the two fixed grids
+   (plugin hero + footer) to one column and let the sticky buy card lead. */
+@media (max-width: 760px) {
+  [style*="grid-template-columns: minmax(0, 1."] { grid-template-columns: minmax(0, 1fr) !important; }
+  aside[style*="position: sticky"] { position: static !important; order: -1; }
+  /* 2026-09-28 export: the buy card + new Specs card sit in a sticky wrapper div; it leads on phones */
+  div[style*="position: sticky; top: 100px"] { position: static !important; order: -1; }
+  /* About page photo is sticky beside the text on desktop; stacked on phones it must scroll away */
+  figure[style*="position: sticky"] { position: static !important; }
+  header[style*="position: sticky"] { position: static !important; }
+}
+/* 2026-10-08 export (big prices, no coupon): the price row (price + REG./label column) and the
+   48px bundle title are nowrap and overflow a 375px phone; let them wrap there. */
+/* At any width (2026-10-12: the bundle title overflowed its card at ~500px, just above the old
+   480px rule): these only wrap when they don't fit, so desktop still matches Design exactly. */
+div[style*="display: flex; align-items: center; gap: 18px;"] { flex-wrap: wrap; }
+div[style*="font-size: 48px; line-height: 1.05; white-space: nowrap"] { white-space: normal !important; }
+h1[style*="font-weight: 400; white-space: nowrap"] { white-space: normal !important; overflow-wrap: break-word; }
+.hv1:hover{color: #e0785c;}
+.hv2:hover{background: #ecd3ae;}
+.hv3:hover{background: #fbf7ee; color: #2a2622;}
+.hv4:hover{background: #e0785c; border-color: #e0785c;}
+.hv5:hover{background: #fbf7ee;}
+.hv6:hover{background: #e0785c; border-color: #e0785c; color: #fbf7ee;}
+.hv7:hover{background: #f3e3c6;}
+.hv8:hover{color: #e0785c; border-color: #e0785c;}
+.hv9:hover{background: #e0785c;}
+.hv10:hover{background: #e0785c; border-color: #e0785c; box-shadow: 5px 6px 0 #2a2622;}
+.hv11:hover{background: #eaf0fb; color: #1b2440;}
+.hv12:hover{background: #eaf0fb; border-color: #eaf0fb;}
+.hv13:hover{background: #fbf7ee; color: #2a2622; border-color: #fbf7ee;}
+.af1::after{content: ''; position: absolute; left: -3px; right: -3px; top: 52%; height: 3px; border-radius: 2px; background: #c8392b; transform: rotate(-16deg);}</style><script src="https://assets.moonbase.sh/storefront/moonbase.js"></script></head><body><div style="min-height: 100vh; display: flex; flex-direction: column; font-family: 'Patrick Hand', cursive; color: #2a2622; background: #fbf7ee;">
+
+  
+    <div style="background: #2a2622; color: #fbf7ee; text-align: center; padding: 8px 16px; font-family: 'Patrick Hand SC', cursive; font-size: 14px; letter-spacing: .14em;">SCHMEAR IS FREE. FOREVER? FOR NOW? WHO KNOWS. GRAB IT BEFORE IT GOES BACK TO $19</div>
+  
+
+  <header style="border-bottom: 3px solid #2a2622; background: #fbf7ee; position: sticky; top: 0; z-index: 30;">
+    <div style="max-width: 1120px; margin: 0 auto; padding: 14px 24px; display: flex; align-items: center; gap: 20px 28px; flex-wrap: wrap;">
+      <a href="/" style="display: flex; align-items: center; gap: 12px; flex-shrink: 0; color: #2a2622;" class="hv1">
+        <img src="/assets/pizza-bagel-transparent-1280.png" alt="Pizza Bagel Plugins" style="width: 46px; height: 46px; display: block;">
+        <div style="font-family: 'Patrick Hand SC', cursive; font-size: 22px; letter-spacing: .12em; line-height: 1; white-space: nowrap;">PIZZA BAGEL PLUGINS</div>
+      </a>
+      <div style="margin-left: auto; display: flex; align-items: center; justify-content: flex-end; gap: 12px 26px; flex-wrap: wrap;">
+      <nav style="display: flex; gap: 26px; flex-wrap: wrap; font-family: 'Patrick Hand SC', cursive; font-size: 17px; letter-spacing: .12em;">
+        
+          <a href="/" style="padding: 6px 0; border-bottom: 3px solid transparent; color: #2a2622;">HOME</a>
+        
+          <a href="/plugins/" style="padding: 6px 0; border-bottom: 3px solid transparent; color: #2a2622;">PLUGINS</a>
+        
+          <a href="/downloads/" style="padding: 6px 0; border-bottom: 3px solid transparent; color: #2a2622;">DOWNLOADS</a>
+        
+          <a href="/about/" style="padding: 6px 0; border-bottom: 3px solid transparent; color: #2a2622;">ABOUT</a>
+        
+          <a href="#" href="#" onclick="PB.account(event)" style="padding: 6px 0; border-bottom: 3px solid transparent; color: #2a2622;">MY ACCOUNT</a>
+        
+      </nav>
+      <div onclick="PB.call(M =&gt; M.view_cart(), event)" style="display: flex; align-items: center; gap: 8px; padding: 6px 12px; border: 2.5px solid #2a2622; border-radius: 999px; font-family: 'Patrick Hand SC', cursive; font-size: 15px; letter-spacing: .1em; cursor: pointer; user-select: none; background: #fbf7ee; color: #2a2622;" class="hv2">
+        <span>CART</span>
+        <span data-moonbase-render="cart.item_count" style="min-width: 20px; height: 20px; border-radius: 50%; background: #e0785c; color: #fbf7ee; display: grid; place-items: center; font-size: 13px;">0</span>
+      </div>
+      </div>
+    </div>
+  </header>
+
+  <section style="background: #e0785c; color: #2a2622; border-bottom: 3px solid #2a2622;">
+    <div style="max-width: 1120px; margin: 0 auto; padding: 22px 24px; display: flex; align-items: center; justify-content: space-between; gap: 16px 32px; flex-wrap: wrap;">
+      <div style="display: flex; flex-direction: column; gap: 6px;">
+        <div style="font-family: 'Caveat Brush', cursive; font-size: clamp(40px, 5.5vw, 64px); line-height: .95; color: #fbf7ee; text-shadow: 3px 3px 0 #2a2622;">Intro prices, for now.</div>
+        <div style="font-family: 'Patrick Hand SC', cursive; font-size: 18px; letter-spacing: .12em; color: #2a2622; text-wrap: balance;">LIMITED TIME ONLY. WHEN IT ENDS, PRICES GO BACK UP.</div>
+      </div>
+      <div style="display: flex; align-items: center; gap: 14px 24px; flex-wrap: wrap;">
+        <div style="display: flex; align-items: center; gap: 10px; font-family: 'Patrick Hand SC', cursive; transform: rotate(-2deg);">
+          <span style="font-size: 16px; letter-spacing: .12em;">UP TO</span>
+          <span style="padding: 6px 16px; background: #fbf7ee; color: #2a2622; border: 3px dashed #2a2622; font-size: 30px; letter-spacing: .14em; line-height: 1.1;">67% OFF</span>
+        </div>
+        <a href="/plugins/" style="padding: 12px 22px; background: #2a2622; color: #fbf7ee; border: 2.5px solid #2a2622; font-family: 'Patrick Hand SC', cursive; font-size: 17px; letter-spacing: .12em; white-space: nowrap; box-shadow: 4px 4px 0 #fbf7ee;" class="hv3">SHOP INTRO PRICES</a>
+      </div>
+    </div>
+  </section>
+
+  <main style="flex: 1;">
+
+    
+
+    
+
+    
+
+    
+
+
+
+    
+
+    
+
+    
+
+    
+
+    
+      <section style="max-width: 820px; margin: 0 auto; padding: 56px 24px 80px; display: flex; flex-direction: column; gap: 28px;">
+        <div style="display: flex; flex-direction: column; gap: 10px; border-bottom: 3px solid #2a2622; padding-bottom: 18px;">
+          <h1 style="margin: 0; font-family: 'Caveat Brush', cursive; font-size: 64px; line-height: 1; font-weight: 400;">Scratch card rules</h1>
+          <div style="font-size: 17px; color: #8a8378;">Last updated October 15, 2026</div>
+        </div>
+        <p style="margin: 0; font-size: 18px; line-height: 1.55; color: #4a443d; text-wrap: pretty;">No purchase necessary. Open to anyone 18 or older. One card per person. Every card wins one of three prizes: 10% off any Pizza Bagel Plugins product (odds: about 99 in 100), Salt free (odds: 1 in 100) or The Everything Bagel bundle free (odds: 1 in 1,000). Prizes are discount or voucher codes redeemed at checkout, which is run by Moonbase. Discount codes expire 7 days after they are shown. Free-plugin codes are single-use and expire 30 days after they are shown. Free plugins are limited to 150 winners per calendar month; if that limit is reached, remaining cards that month win 10% off. Prizes have no cash value and cannot be exchanged. Sponsor: Pizza Bagel Music LLC, Glendale, California. Questions: hello@pizzabagelplugins.com.</p>
+      </section>
+    
+
+    
+  </main>
+
+  <section style="border-top: 3px solid #2a2622; background: #fbf7ee;">
+    <div style="max-width: 1120px; margin: 0 auto; padding: 44px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 20px 40px;">
+      <div style="display: flex; flex-direction: column; gap: 6px; max-width: 520px;">
+        <div style="font-family: 'Caveat Brush', cursive; font-size: 34px; line-height: 1;">Stay in the loop</div>
+        <div style="font-size: 17px; line-height: 1.4; color: #4a443d; text-wrap: pretty;">New plugins, updates, and the occasional discount for people on the list. One email a month, tops.</div>
+      </div>
+      <div style="display: flex; gap: 0; flex: 1 1 320px; max-width: 460px;">
+        <form onsubmit="PB.subscribe(event, this)" style="display: contents;"><input type="email" name="email" placeholder="you@studio.com" autocomplete="email" required style="flex: 1; min-width: 0; padding: 12px 14px; border: 2.5px solid #2a2622; border-right: none; background: #fbf7ee; font-size: 18px; color: #2a2622; outline: none;"><button type="submit" style="padding: 12px 22px; background: #2a2622; color: #fbf7ee; border: 2.5px solid #2a2622; font-family: 'Patrick Hand SC', cursive; font-size: 16px; letter-spacing: .12em; cursor: pointer; user-select: none; white-space: nowrap;" class="hv4">SIGN UP</button></form>
+      </div>
+    </div>
+  </section>
+
+  <footer style="background: #2a2622; color: #fbf7ee; border-top: 3px solid #2a2622;">
+    <div style="max-width: 1120px; margin: 0 auto; padding: 56px 24px 32px; display: grid; grid-template-columns: minmax(0, 1.4fr) repeat(2, minmax(150px, .6fr)); gap: 40px;">
+      <div style="display: flex; flex-direction: column; gap: 14px;">
+        <div style="display: flex; align-items: center; gap: 12px;">
+          <img src="/assets/pizza-bagel-transparent-1280.png" alt="" style="width: 54px; height: 54px; display: block;">
+          <a href="/about/" style="font-family: 'Caveat Brush', cursive; font-size: 30px; line-height: 1; white-space: nowrap; color: #fbf7ee;" class="hv1">About me</a>
+        </div>
+        <p style="margin: 0; font-size: 17px; line-height: 1.5; color: #d9d0c0; max-width: 460px; text-wrap: pretty;">I’m Justin Gammella, a platinum-selling producer, vocal producer and songwriter in Los Angeles. Pizza Bagel Plugins is me building the handful of tools I actually reach for in every session and shipping them one at a time.</p>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 10px; font-family: 'Patrick Hand SC', cursive; font-size: 15px; letter-spacing: .12em;">
+        <div style="font-size: 12px; letter-spacing: .18em; color: #8a8378; margin-bottom: 4px;">INFO</div>
+        <a href="/faq/" style="color: #fbf7ee;" class="hv1">FAQ</a>
+        <a href="/contact/" style="color: #fbf7ee;" class="hv1">CONTACT US</a>
+        <a href="/privacy/" style="color: #fbf7ee;" class="hv1">PRIVACY POLICY</a>
+        <a href="/rules/" style="color: #fbf7ee;" class="hv1">PROMO RULES</a>
+        <a href="#" onclick="PBC.open(event)" style="color: #fbf7ee;" class="hv1">COOKIE SETTINGS</a>
+        <a href="/eula/" style="color: #fbf7ee;" class="hv1">LICENSE AGREEMENT</a>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 10px; font-family: 'Patrick Hand SC', cursive; font-size: 15px; letter-spacing: .12em;">
+        <div style="font-size: 12px; letter-spacing: .18em; color: #8a8378; margin-bottom: 4px;">SOCIALS</div>
+        <a href="https://www.instagram.com/pizzabagelplugins/" target="_blank" rel="noopener" style="color: #fbf7ee;" class="hv1">INSTAGRAM</a>
+        <a href="https://www.youtube.com/channel/UCBvRxBWzSxX4CTzP6gq56gQ" target="_blank" rel="noopener" style="color: #fbf7ee;" class="hv1">YOUTUBE</a>
+      </div>
+    </div>
+    <div style="max-width: 1120px; margin: 0 auto; padding: 18px 24px 28px; border-top: 1px solid #4a443d; display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; font-family: 'Patrick Hand SC', cursive; font-size: 12px; letter-spacing: .14em; color: #8a8378;">
+      <div>© 2026 PIZZA BAGEL MUSIC LLC · LOS ANGELES, CA</div>
+      <div style="display: flex; gap: 22px; flex-wrap: wrap;"><a href="https://help.moonbase.sh/articles/3131239-general-terms-and-conditions-for-buyers" style="color: #8a8378;" class="hv1">TERMS OF SALE</a><div>HELLO@PIZZABAGELPLUGINS.COM</div></div>
+    </div>
+  </footer>
+
+  
+</div>
+
+<template id="pbs-closed">
+    <div onclick="PBS.close(event)" style="position: fixed; inset: 0; z-index: 60; background: rgba(42,38,34,.74); display: grid; place-items: center; padding: 24px 16px; overflow: auto; font-family: 'Patrick Hand', cursive; color: #2a2622;">
+      <div onclick="event.stopPropagation()" style="position: relative; width: min(100%, 440px); background: #fbf7ee; border: 3px solid #2a2622; box-shadow: 8px 9px 0 #2a2622; transform: rotate(-1.2deg); padding: 30px 26px 24px; display: flex; flex-direction: column; gap: 18px;">
+        <div onclick="PBS.close(event)" aria-label="Close" style="position: absolute; top: -18px; right: -18px; width: 44px; height: 44px; border-radius: 50%; background: #2a2622; color: #fbf7ee; border: 3px solid #fbf7ee; display: grid; place-items: center; font-family: 'Patrick Hand SC', cursive; font-size: 24px; line-height: 1; cursor: pointer; user-select: none; z-index: 2;" class="hv9">×</div>
+
+        
+          <div style="display: flex; flex-direction: column; gap: 6px;">
+            <div style="font-family: 'Patrick Hand SC', cursive; font-size: 13px; letter-spacing: .18em; color: #8a8378;">PIZZA BAGEL PLUGINS · PROMO</div>
+            <h2 style="margin: 0; font-family: 'Caveat Brush', cursive; font-size: 52px; line-height: .95; font-weight: 400;">Scratch and win</h2>
+            <div style="font-size: 20px; line-height: 1.35; color: #4a443d; text-wrap: pretty;">Every card wins something. Scratch to see what.</div>
+          </div>
+          <div data-scratch-area style="position: relative; height: 190px; border: 3px solid #2a2622; background: #ecd3ae; overflow: hidden; touch-action: none;">
+            
+              <div style="position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; text-align: center;">
+                <div style="font-family: 'Caveat Brush', cursive; font-size: 64px; line-height: .9; color: #2a2622;">10% off</div>
+                <div style="font-family: 'Patrick Hand SC', cursive; font-size: 16px; letter-spacing: .16em; color: #4a443d;">ANY PLUGIN</div>
+              </div>
+            
+            
+            
+            
+              <canvas data-scratch-foil style="position: absolute; inset: 0; width: 100%; height: 100%; display: block; cursor: crosshair; touch-action: none; user-select: none;"></canvas>
+            
+            
+          </div>
+          <div style="font-size: 15px; line-height: 1.45; color: #6b645b; text-wrap: pretty;">1 in 100 cards wins Salt. 1 in 1,000 wins The Everything Bagel. Everyone else gets 10% off. No purchase needed. <a href="/rules/" style="color: #2a2622; border-bottom: 2px solid #2a2622;">Rules</a></div>
+        
+
+        
+
+        
+
+        
+      </div>
+    </div>
+  </template>
+<template id="pbs-closed-salt">
+    <div onclick="PBS.close(event)" style="position: fixed; inset: 0; z-index: 60; background: rgba(42,38,34,.74); display: grid; place-items: center; padding: 24px 16px; overflow: auto; font-family: 'Patrick Hand', cursive; color: #2a2622;">
+      <div onclick="event.stopPropagation()" style="position: relative; width: min(100%, 440px); background: #fbf7ee; border: 3px solid #2a2622; box-shadow: 8px 9px 0 #2a2622; transform: rotate(-1.2deg); padding: 30px 26px 24px; display: flex; flex-direction: column; gap: 18px;">
+        <div onclick="PBS.close(event)" aria-label="Close" style="position: absolute; top: -18px; right: -18px; width: 44px; height: 44px; border-radius: 50%; background: #2a2622; color: #fbf7ee; border: 3px solid #fbf7ee; display: grid; place-items: center; font-family: 'Patrick Hand SC', cursive; font-size: 24px; line-height: 1; cursor: pointer; user-select: none; z-index: 2;" class="hv9">×</div>
+
+        
+          <div style="display: flex; flex-direction: column; gap: 6px;">
+            <div style="font-family: 'Patrick Hand SC', cursive; font-size: 13px; letter-spacing: .18em; color: #8a8378;">PIZZA BAGEL PLUGINS · PROMO</div>
+            <h2 style="margin: 0; font-family: 'Caveat Brush', cursive; font-size: 52px; line-height: .95; font-weight: 400;">Scratch and win</h2>
+            <div style="font-size: 20px; line-height: 1.35; color: #4a443d; text-wrap: pretty;">Every card wins something. Scratch to see what.</div>
+          </div>
+          <div data-scratch-area style="position: relative; height: 190px; border: 3px solid #2a2622; background: #ecd3ae; overflow: hidden; touch-action: none;">
+            
+            
+              <div style="position: absolute; inset: 0; background: #1a2749; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; text-align: center;">
+                <div style="padding: 5px 14px; background: #f0c25c; color: #1b2440; font-family: 'Patrick Hand SC', cursive; font-size: 14px; letter-spacing: .2em; line-height: 1; transform: rotate(-3deg);">A REAL WIN</div>
+                <div style="font-family: 'Caveat Brush', cursive; font-size: 66px; line-height: .9; color: #eaf0fb;">Free Salt</div>
+                <div style="font-family: 'Patrick Hand SC', cursive; font-size: 16px; letter-spacing: .16em; color: #f0c25c;">THE ENHANCER. YOURS.</div>
+              </div>
+            
+            
+            
+              <canvas data-scratch-foil style="position: absolute; inset: 0; width: 100%; height: 100%; display: block; cursor: crosshair; touch-action: none; user-select: none;"></canvas>
+            
+            
+          </div>
+          <div style="font-size: 15px; line-height: 1.45; color: #6b645b; text-wrap: pretty;">1 in 100 cards wins Salt. 1 in 1,000 wins The Everything Bagel. Everyone else gets 10% off. No purchase needed. <a href="/rules/" style="color: #2a2622; border-bottom: 2px solid #2a2622;">Rules</a></div>
+        
+
+        
+
+        
+
+        
+      </div>
+    </div>
+  </template>
+<template id="pbs-closed-bagel">
+    <div onclick="PBS.close(event)" style="position: fixed; inset: 0; z-index: 60; background: rgba(42,38,34,.74); display: grid; place-items: center; padding: 24px 16px; overflow: auto; font-family: 'Patrick Hand', cursive; color: #2a2622;">
+      <div onclick="event.stopPropagation()" style="position: relative; width: min(100%, 440px); background: #fbf7ee; border: 3px solid #2a2622; box-shadow: 8px 9px 0 #2a2622; transform: rotate(-1.2deg); padding: 30px 26px 24px; display: flex; flex-direction: column; gap: 18px;">
+        <div onclick="PBS.close(event)" aria-label="Close" style="position: absolute; top: -18px; right: -18px; width: 44px; height: 44px; border-radius: 50%; background: #2a2622; color: #fbf7ee; border: 3px solid #fbf7ee; display: grid; place-items: center; font-family: 'Patrick Hand SC', cursive; font-size: 24px; line-height: 1; cursor: pointer; user-select: none; z-index: 2;" class="hv9">×</div>
+
+        
+          <div style="display: flex; flex-direction: column; gap: 6px;">
+            <div style="font-family: 'Patrick Hand SC', cursive; font-size: 13px; letter-spacing: .18em; color: #8a8378;">PIZZA BAGEL PLUGINS · PROMO</div>
+            <h2 style="margin: 0; font-family: 'Caveat Brush', cursive; font-size: 52px; line-height: .95; font-weight: 400;">Scratch and win</h2>
+            <div style="font-size: 20px; line-height: 1.35; color: #4a443d; text-wrap: pretty;">Every card wins something. Scratch to see what.</div>
+          </div>
+          <div data-scratch-area style="position: relative; height: 190px; border: 3px solid #2a2622; background: #ecd3ae; overflow: hidden; touch-action: none;">
+            
+            
+            
+              <div style="position: absolute; inset: 0; background: #2a2622; color: #fbf7ee; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; text-align: center; overflow: hidden;">
+                <div style="position: absolute; inset: -60%; background: repeating-conic-gradient(from 0deg, rgba(251,247,238,.1) 0 9deg, transparent 9deg 18deg);"></div>
+                <div style="position: relative; padding: 5px 14px; background: #e0785c; border: 2.5px solid #fbf7ee; font-family: 'Patrick Hand SC', cursive; font-size: 14px; letter-spacing: .2em; line-height: 1; transform: rotate(-4deg);">JACKPOT</div>
+                <div style="position: relative; font-family: 'Caveat Brush', cursive; font-size: 54px; line-height: .9; text-wrap: balance;">The Everything Bagel</div>
+                <div style="position: relative; font-family: 'Patrick Hand SC', cursive; font-size: 15px; letter-spacing: .16em; color: #ecd3ae;">ALL THREE PLUGINS. FREE.</div>
+              </div>
+            
+            
+              <canvas data-scratch-foil style="position: absolute; inset: 0; width: 100%; height: 100%; display: block; cursor: crosshair; touch-action: none; user-select: none;"></canvas>
+            
+            
+          </div>
+          <div style="font-size: 15px; line-height: 1.45; color: #6b645b; text-wrap: pretty;">1 in 100 cards wins Salt. 1 in 1,000 wins The Everything Bagel. Everyone else gets 10% off. No purchase needed. <a href="/rules/" style="color: #2a2622; border-bottom: 2px solid #2a2622;">Rules</a></div>
+        
+
+        
+
+        
+
+        
+      </div>
+    </div>
+  </template>
+<template id="pbs-won-10">
+    <div onclick="PBS.close(event)" style="position: fixed; inset: 0; z-index: 60; background: rgba(42,38,34,.74); display: grid; place-items: center; padding: 24px 16px; overflow: auto; font-family: 'Patrick Hand', cursive; color: #2a2622;">
+      <div onclick="event.stopPropagation()" style="position: relative; width: min(100%, 440px); background: #fbf7ee; border: 3px solid #2a2622; box-shadow: 8px 9px 0 #2a2622; transform: rotate(-1.2deg); padding: 30px 26px 24px; display: flex; flex-direction: column; gap: 18px;">
+        <div onclick="PBS.close(event)" aria-label="Close" style="position: absolute; top: -18px; right: -18px; width: 44px; height: 44px; border-radius: 50%; background: #2a2622; color: #fbf7ee; border: 3px solid #fbf7ee; display: grid; place-items: center; font-family: 'Patrick Hand SC', cursive; font-size: 24px; line-height: 1; cursor: pointer; user-select: none; z-index: 2;" class="hv9">×</div>
+
+        
+
+        
+          <div style="display: flex; flex-direction: column; gap: 6px;">
+            <div style="font-family: 'Patrick Hand SC', cursive; font-size: 13px; letter-spacing: .18em; color: #e0785c;">YOU WON</div>
+            <h2 style="margin: 0; font-family: 'Caveat Brush', cursive; font-size: 48px; line-height: .95; font-weight: 400;">10% off, any plugin</h2>
+          </div>
+          <div data-scratch-code style="padding: 18px 16px; border: 3px dashed #2a2622; background: #ecd3ae; text-align: center; font-family: 'Patrick Hand SC', cursive; font-size: 34px; letter-spacing: .16em; line-height: 1; user-select: all; overflow-wrap: anywhere;">__CODE__</div>
+          <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+            <a href="#" data-scratch-copy style="flex: 1 1 140px; text-align: center; padding: 14px 18px; background: #fbf7ee; color: #2a2622; border: 2.5px solid #2a2622; font-family: 'Patrick Hand SC', cursive; font-size: 17px; letter-spacing: .12em; white-space: nowrap;" class="hv2">COPY CODE</a>
+            <a href="/plugins/" style="flex: 1 1 140px; text-align: center; padding: 14px 18px; background: #2a2622; color: #fbf7ee; border: 2.5px solid #2a2622; font-family: 'Patrick Hand SC', cursive; font-size: 17px; letter-spacing: .12em; white-space: nowrap;" class="hv4">SHOP THE SALE</a>
+          </div>
+          <div style="font-size: 15px; line-height: 1.45; color: #6b645b;">Enter the code at checkout. Good for 7 days.</div>
+        
+
+        
+
+        
+      </div>
+    </div>
+  </template>
+<template id="pbs-won-salt">
+    <div onclick="PBS.close(event)" style="position: fixed; inset: 0; z-index: 60; background: rgba(42,38,34,.74); display: grid; place-items: center; padding: 24px 16px; overflow: auto; font-family: 'Patrick Hand', cursive; color: #2a2622;">
+      <div onclick="event.stopPropagation()" style="position: relative; width: min(100%, 440px); background: #fbf7ee; border: 3px solid #2a2622; box-shadow: 8px 9px 0 #2a2622; transform: rotate(-1.2deg); padding: 30px 26px 24px; display: flex; flex-direction: column; gap: 18px;">
+        <div onclick="PBS.close(event)" aria-label="Close" style="position: absolute; top: -18px; right: -18px; width: 44px; height: 44px; border-radius: 50%; background: #2a2622; color: #fbf7ee; border: 3px solid #fbf7ee; display: grid; place-items: center; font-family: 'Patrick Hand SC', cursive; font-size: 24px; line-height: 1; cursor: pointer; user-select: none; z-index: 2;" class="hv9">×</div>
+
+        
+
+        
+
+        
+          <div style="margin: -30px -26px -24px; padding: 34px 26px 26px; background: #1a2749; color: #eaf0fb; display: flex; flex-direction: column; gap: 18px; position: relative;">
+            <div style="position: absolute; top: -14px; left: 22px; padding: 6px 14px; background: #f0c25c; color: #1b2440; border: 3px solid #eaf0fb; font-family: 'Patrick Hand SC', cursive; font-size: 14px; letter-spacing: .18em; line-height: 1; transform: rotate(-4deg);">A REAL WIN</div>
+            <div style="display: flex; flex-direction: column; gap: 8px; padding-top: 6px;">
+              <h2 style="margin: 0; font-family: 'Caveat Brush', cursive; font-size: 60px; line-height: .92; font-weight: 400; color: #eaf0fb;">You won Salt</h2>
+              <div style="font-size: 21px; line-height: 1.35; color: #f0c25c;">The enhancer, free. For real.</div>
+            </div>
+            <div data-scratch-code style="padding: 18px 16px; border: 3px dashed #f0c25c; background: #eaf0fb; color: #1b2440; text-align: center; font-family: 'Patrick Hand SC', cursive; font-size: 34px; letter-spacing: .16em; line-height: 1; user-select: all; overflow-wrap: anywhere;">__CODE__</div>
+            <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+              <a href="#" data-scratch-copy style="flex: 1 1 140px; text-align: center; padding: 14px 18px; background: transparent; color: #eaf0fb; border: 2.5px solid #eaf0fb; font-family: 'Patrick Hand SC', cursive; font-size: 17px; letter-spacing: .12em; white-space: nowrap;" class="hv11">COPY CODE</a>
+              <a href="/plugins/salt/" style="flex: 1 1 140px; text-align: center; padding: 14px 18px; background: #f0c25c; color: #1b2440; border: 2.5px solid #f0c25c; font-family: 'Patrick Hand SC', cursive; font-size: 17px; letter-spacing: .12em; white-space: nowrap;" class="hv12">REDEEM</a>
+            </div>
+            <div style="font-size: 15px; line-height: 1.45; color: #a9bce0;">Single-use code. Enter it at checkout and Salt is yours.</div>
+          </div>
+        
+
+        
+      </div>
+    </div>
+  </template>
+<template id="pbs-won-bagel">
+    <div onclick="PBS.close(event)" style="position: fixed; inset: 0; z-index: 60; background: rgba(42,38,34,.74); display: grid; place-items: center; padding: 24px 16px; overflow: auto; font-family: 'Patrick Hand', cursive; color: #2a2622;">
+      <div onclick="event.stopPropagation()" style="position: relative; width: min(100%, 440px); background: #fbf7ee; border: 3px solid #2a2622; box-shadow: 8px 9px 0 #2a2622; transform: rotate(-1.2deg); padding: 30px 26px 24px; display: flex; flex-direction: column; gap: 18px;">
+        <div onclick="PBS.close(event)" aria-label="Close" style="position: absolute; top: -18px; right: -18px; width: 44px; height: 44px; border-radius: 50%; background: #2a2622; color: #fbf7ee; border: 3px solid #fbf7ee; display: grid; place-items: center; font-family: 'Patrick Hand SC', cursive; font-size: 24px; line-height: 1; cursor: pointer; user-select: none; z-index: 2;" class="hv9">×</div>
+
+        
+
+        
+
+        
+
+        
+          <div style="margin: -30px -26px -24px; padding: 34px 26px 26px; background: #2a2622; color: #fbf7ee; display: flex; flex-direction: column; gap: 18px; position: relative; overflow: hidden;">
+            <div style="position: absolute; inset: -40%; background: repeating-conic-gradient(from 0deg, rgba(251,247,238,.09) 0 9deg, transparent 9deg 18deg); pointer-events: none;"></div>
+            <div style="position: absolute; top: 18px; right: -8px; padding: 8px 18px; background: #e0785c; color: #fbf7ee; border: 3px solid #fbf7ee; box-shadow: 3px 3px 0 #fbf7ee; font-family: 'Patrick Hand SC', cursive; font-size: 15px; letter-spacing: .2em; line-height: 1; transform: rotate(7deg);">JACKPOT</div>
+            <div style="position: relative; display: flex; flex-direction: column; gap: 10px; padding-right: 60px;">
+              <div style="font-family: 'Patrick Hand SC', cursive; font-size: 13px; letter-spacing: .18em; color: #ecd3ae;">1 IN 1,000. THAT’S YOU.</div>
+              <h2 style="margin: 0; font-family: 'Caveat Brush', cursive; font-size: 58px; line-height: .9; font-weight: 400; color: #fbf7ee; text-wrap: balance;">You won The Everything Bagel</h2>
+              <div style="font-size: 21px; line-height: 1.35; color: #ecd3ae; text-wrap: pretty;">JJG Vocals, Salt and Schmear. All of it. Free.</div>
+            </div>
+            <div data-scratch-code style="position: relative; padding: 18px 16px; border: 3px dashed #fbf7ee; background: #fbf7ee; color: #2a2622; text-align: center; font-family: 'Patrick Hand SC', cursive; font-size: 34px; letter-spacing: .16em; line-height: 1; user-select: all; overflow-wrap: anywhere;">__CODE__</div>
+            <div style="position: relative; display: flex; gap: 12px; flex-wrap: wrap;">
+              <a href="#" data-scratch-copy style="flex: 1 1 140px; text-align: center; padding: 14px 18px; background: transparent; color: #fbf7ee; border: 2.5px solid #fbf7ee; font-family: 'Patrick Hand SC', cursive; font-size: 17px; letter-spacing: .12em; white-space: nowrap;" class="hv3">COPY CODE</a>
+              <a href="/plugins/bundle/" style="flex: 1 1 140px; text-align: center; padding: 14px 18px; background: #e0785c; color: #fbf7ee; border: 2.5px solid #e0785c; font-family: 'Patrick Hand SC', cursive; font-size: 17px; letter-spacing: .12em; white-space: nowrap;" class="hv13">REDEEM</a>
+            </div>
+            <div style="position: relative; font-size: 15px; line-height: 1.45; color: #d9d0c0;">Single-use code. Enter it at checkout and the bundle is yours.</div>
+          </div>
+        
+      </div>
+    </div>
+  </template>
+
+<script>
+window.PB = {
+  ready: false, tries: 0,
+  boot: function () {
+    if (window.Moonbase) {
+      if (!PB.ready) {
+        PB.ready = true;
+        window.Moonbase.setup('https://pizza-bagel-plugins.moonbase.sh', {
+          toolbar: { enabled: false },
+          checkout: { redirect: 'auto' },
+          auth: { signUp: { marketingConsent: 'OptIn' } },
+          theme: { dark: false, colors: { primary: '#e0785c', background: 'white' },
+                   fonts: { heading: { family: "'Caveat Brush', cursive" }, body: { family: "'Patrick Hand', cursive" } },
+                   corners: 'sharp', buttons: 'outlined', cards: 'outlined' }
+        }).catch(function () {});
+      }
+    } else if (PB.tries++ < 50) {
+      setTimeout(PB.boot, 200);
+    }
+  },
+  stop: function (e) { if (e) { if (e.preventDefault) e.preventDefault(); } },
+  call: function (fn, e) {
+    PB.stop(e);
+    var M = window.Moonbase;
+    if (M) {
+      if (PB.ready) { try { fn(M); } catch (err) { console.warn('Moonbase', err); } return; }
+    }
+    window.open('https://pizza-bagel-plugins.moonbase.sh', '_blank');
+  },
+  account: function (e) { PB.call(function (M) { M.view_account(); }, e); },
+  subscribe: function (e, form) {
+    PB.stop(e);
+    var em = form.querySelector('input[type=email]').value.trim();
+    PB.call(function (M) { M.subscribe(em ? { email: em } : undefined); }, null);
+  },
+  sendContact: function (e) {
+    PB.stop(e);
+    var v = function (id) { var el = document.getElementById(id); return el ? el.value.trim() : ''; };
+    var body = 'Name: ' + v('cf-name') + '\nEmail: ' + v('cf-email') + '\nTopic: ' + v('cf-topic') + '\n\n' + v('cf-msg');
+    location.href = 'mailto:hello@pizzabagelplugins.com?subject=' + encodeURIComponent('[' + v('cf-topic') + '] from ' + v('cf-name'))
+                  + '\x26body=' + encodeURIComponent(body);
+  }
+};
+window.addEventListener('message', function(e){ var d=e.data; if(d){ if(d.type==='pbp-height'){ var f=document.querySelector('iframe.pbp-demo'); if(f){ if(f.src.indexOf(e.origin)===0){ f.style.height=Math.ceil(d.height)+'px'; } } } } });
+PB.boot();
+</script>
+
+<style>
+#pb-consent{position:fixed;left:16px;bottom:16px;z-index:900;max-width:400px;box-sizing:border-box;background:#fbf7ee;color:#2a2622;border:3px solid #2a2622;box-shadow:6px 7px 0 #ecd3ae;padding:18px 20px;font-family:'Patrick Hand',cursive;display:flex;flex-direction:column;gap:10px}
+#pb-consent p{margin:0;font-size:17px;line-height:1.4;color:#4a443d}
+#pb-consent a{border-bottom:2px solid #2a2622}
+#pb-consent .pbc-row{display:flex;gap:10px;flex-wrap:wrap}
+#pb-consent button{font-family:'Patrick Hand SC',cursive;font-size:15px;letter-spacing:.12em;padding:10px 18px;border:2.5px solid #2a2622;cursor:pointer}
+#pb-consent .pbc-yes{background:#2a2622;color:#fbf7ee}
+#pb-consent .pbc-yes:hover{background:#e0785c;border-color:#e0785c}
+#pb-consent .pbc-no{background:transparent;color:#2a2622}
+#pb-consent .pbc-no:hover{color:#e0785c;border-color:#e0785c}
+@media (max-width:480px){#pb-consent{left:12px;right:12px;bottom:12px;max-width:none}}
+</style>
+<div id="pb-consent" role="dialog" aria-label="Cookie choice" hidden>
+  <div style="font-family:'Caveat Brush',cursive;font-size:30px;line-height:1;">We value your privacy</div>
+  <p>We and our partners use cookies to see how people find us and to show more relevant ads. Accept to allow them. Decline and we only use the cookies the site needs to work. <a href="/privacy/">Privacy policy</a></p>
+  <div class="pbc-row"><button type="button" class="pbc-yes" onclick="PBC.choose('yes')">ACCEPT</button><button type="button" class="pbc-no" onclick="PBC.choose('no')">DECLINE</button></div>
+</div>
+<script>
+window.PBC = (function () {
+  var KEY = 'pbp-consent', ID = '4608922252767901', loaded = false, hooked = false, tries = 0;
+  function get() { try { return localStorage.getItem(KEY); } catch (e) { return null; } }
+  function put(v) { try { localStorage.setItem(KEY, v); } catch (e) {} }
+  function box() { return document.getElementById('pb-consent'); }
+  function send(kind, name, data) { if (loaded) { try { window.fbq(kind, name, data || {}); } catch (e) {} } }
+  function items(order, cur) {
+    var out = [], list = (order ? order.items : null) || [];
+    for (var i = 0; i < list.length; i++) {
+      var it = list[i], p = it.product || it.bundle || {}, price;
+      if (it.total) { if (it.total.due) price = it.total.due.amount; }
+      if (price === undefined) { if (it.price) price = it.price[cur]; }
+      out.push({ id: p.id, name: p.name, quantity: it.quantity || 1, item_price: price });
+    }
+    return out;
+  }
+  function ids(list) { var r = []; for (var i = 0; i < list.length; i++) r.push(list[i].id); return r; }
+  function hook() {
+    if (hooked) return;
+    var M = window.Moonbase;
+    if (!M || !window.PB || !PB.ready || typeof M.on !== 'function') { if (tries++ < 60) setTimeout(hook, 250); return; }
+    hooked = true;
+    M.on('added-to-cart', function (e) {
+      var it = e.item || {}, p = it.product || it.bundle || {}, cur = e.currency, unit = it.price ? it.price[cur] : undefined;
+      send('track', 'AddToCart', { currency: cur, value: unit === undefined ? undefined : unit * (it.quantity || 1), content_ids: [p.id], content_name: p.name, content_type: 'product' });
+    });
+    M.on('checkout-initiated', function (e) {
+      var cur = e.total ? e.total.currency : undefined, list = items(e.order, cur);
+      send('track', 'InitiateCheckout', { currency: cur, value: e.total ? e.total.amount : undefined, num_items: list.length, content_ids: ids(list), contents: list, content_type: 'product' });
+    });
+    M.on('checkout-completed', function (e) {
+      var due = (e.order ? (e.order.total ? e.order.total.due : null) : null) || {}, list = items(e.order, due.currency);
+      send('track', 'Purchase', { currency: due.currency, value: due.amount, num_items: list.length, content_ids: ids(list), contents: list, content_type: 'product' });
+    });
+  }
+  function load() {
+    if (loaded) return;
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    window.fbq('set', 'autoConfig', false, ID);   // no automatic button-click / metadata events
+    window.fbq('init', ID);
+    loaded = true;
+    send('track', 'PageView');
+    if (window.PB_VIEW) send('track', 'ViewContent', window.PB_VIEW);
+    hook();
+  }
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest ? e.target.closest('a') : null;
+    if (a) { if (String(a.href).indexOf('/releases/download/installer') > -1) send('trackCustom', 'DownloadInstaller'); }
+  }, true);
+  if (window.PB) { var sub = PB.subscribe; PB.subscribe = function (e, form) { send('track', 'Lead'); return sub(e, form); }; }
+  var api = {
+    choose: function (v) {
+      var was = get(); put(v); box().hidden = true;
+      if (v === 'yes') { load(); return; }
+      if (was === 'yes') {
+        document.cookie = '_fbp=; Max-Age=0; path=/';
+        document.cookie = '_fbp=; Max-Age=0; path=/; domain=.' + location.hostname.replace(/^www\./, '');
+        location.reload();
+      }
+    },
+    open: function (e) { if (e) { if (e.preventDefault) e.preventDefault(); } box().hidden = false; },
+    state: get
+  };
+  var c = get();
+  if (c === 'yes') load(); else if (c !== 'no') box().hidden = false;
+  return api;
+})();
+</script>
+
+<style>
+/* Phone: keep the card's close button inside the viewport (Design hangs it 18px outside the card). */
+@media (max-width: 480px) { #pbs-host [aria-label="Close"] { top: -14px !important; right: -6px !important; } }
+</style>
+<script>
+window.PBS = (function () {
+  var KEY = 'pbp-scratch', API = "https://pbp-scratch.scratch-worker.workers.dev/draw", FALLBACK = 'SCRATCH10', host = null, state = null;
+  function get() { try { return JSON.parse(localStorage.getItem(KEY) || 'null'); } catch (e) { return null; } }
+  function put(v) { try { localStorage.setItem(KEY, JSON.stringify(v)); } catch (e) {} }
+  function tpl(id) { var t = document.getElementById('pbs-' + id); return t ? t.innerHTML : ''; }
+  function show(id, code) {
+    if (!host) { host = document.createElement('div'); host.id = 'pbs-host'; document.body.appendChild(host); }
+    host.innerHTML = tpl(id).split('__CODE__').join(code || '');
+    document.body.style.overflow = 'hidden';
+    var foil = host.querySelector('[data-scratch-foil]');
+    if (foil) requestAnimationFrame(function () { initFoil(foil); });
+    var copy = host.querySelector('[data-scratch-copy]');
+    if (copy) copy.onclick = function (e) { e.preventDefault(); copyCode(code, copy); };
+  }
+  function copyCode(code, el) {
+    var done = function () { var t = el.textContent; el.textContent = 'COPIED'; setTimeout(function () { el.textContent = t; }, 1600); };
+    if (navigator.clipboard) { navigator.clipboard.writeText(code).then(done, function () { fallbackCopy(code); done(); }); }
+    else { fallbackCopy(code); done(); }
+  }
+  function fallbackCopy(code) {
+    var ta = document.createElement('textarea'); ta.value = code; document.body.appendChild(ta); ta.select();
+    try { document.execCommand('copy'); } catch (e) {} document.body.removeChild(ta);
+  }
+  function close(e) {
+    if (e) { if (e.preventDefault) e.preventDefault(); }
+    if (host) { host.innerHTML = ''; }
+    document.body.style.overflow = '';
+    var s = get() || {}; if (!s.result) { s.closed = Date.now(); put(s); }
+  }
+  // Design's foil, ported: striped tomato foil with a SCRATCH HERE sticker; destination-out strokes.
+  function initFoil(c) {
+    var dpr = Math.min(2, window.devicePixelRatio || 1), w = c.clientWidth, h = c.clientHeight;
+    if (!w || !h) return;
+    c.width = w * dpr; c.height = h * dpr;
+    var x = c.getContext('2d'); x.scale(dpr, dpr);
+    x.fillStyle = '#e0785c'; x.fillRect(0, 0, w, h);
+    x.save(); x.translate(w / 2, h / 2); x.rotate(Math.PI / 4); x.fillStyle = '#cf6a4f';
+    for (var i = -w - h; i < w + h; i += 48) x.fillRect(i, -w - h, 24, 2 * (w + h));
+    x.restore();
+    x.save(); x.translate(w / 2, h / 2); x.rotate(-3 * Math.PI / 180);
+    x.font = "26px 'Patrick Hand SC', cursive"; var tw = x.measureText('SCRATCH HERE').width + 20 * .18 * 11, bw = tw + 44, bh = 46;
+    x.fillStyle = '#2a2622'; x.fillRect(-bw / 2 + 4, -bh / 2 + 4, bw, bh);
+    x.fillStyle = '#fbf7ee'; x.fillRect(-bw / 2, -bh / 2, bw, bh);
+    x.lineWidth = 3; x.strokeStyle = '#2a2622'; x.strokeRect(-bw / 2, -bh / 2, bw, bh);
+    x.fillStyle = '#2a2622'; x.textBaseline = 'middle'; x.letterSpacing = '.18em'; x.textAlign = 'center'; x.fillText('SCRATCH HERE', 4, 2);
+    x.restore();
+    x.globalCompositeOperation = 'destination-out'; x.lineCap = 'round'; x.lineJoin = 'round'; x.lineWidth = 46;
+    var last = null, down = false, done = false;
+    var pt = function (e) { var r = c.getBoundingClientRect(); return [(e.clientX - r.left) * w / r.width, (e.clientY - r.top) * h / r.height]; };
+    var cleared = function () { var d = x.getImageData(0, 0, c.width, c.height).data, n = 0, t = 0; for (var i = 3; i < d.length; i += 64) { t++; if (d[i] < 40) n++; } return n / t; };
+    var finish = function () {
+      if (done) return; done = true;
+      c.style.transition = 'opacity .45s'; c.style.opacity = '0';
+      setTimeout(function () { var s = get() || {}; show(s.result.state, s.result.code); }, 800);
+    };
+    c.onpointerdown = function (e) { down = true; last = pt(e); c.setPointerCapture(e.pointerId); x.beginPath(); x.arc(last[0], last[1], 23, 0, 7); x.fill(); };
+    c.onpointermove = function (e) { if (!down) return; var p = pt(e); x.beginPath(); x.moveTo(last[0], last[1]); x.lineTo(p[0], p[1]); x.stroke(); last = p; };
+    c.onpointerup = c.onpointercancel = function () { down = false; if (cleared() > .55) finish(); };
+  }
+  // The draw happens when the card opens, so the prize under the foil is already decided.
+  function draw() {
+    if (!API) return Promise.resolve({ state: 'won-10', code: FALLBACK });
+    return fetch(API, { method: 'POST', headers: { 'content-type': 'application/json' }, body: '{}' })
+      .then(function (r) { return r.ok ? r.json() : null; })
+      .then(function (j) { return (j && j.state && j.code) ? j : { state: 'won-10', code: FALLBACK }; })
+      .catch(function () { return { state: 'won-10', code: FALLBACK }; });
+  }
+  function open() {
+    var s = get() || {};
+    if (s.result) { show(s.result.state, s.result.code); return; }
+    draw().then(function (res) {
+      s.result = res; s.drawn = Date.now(); put(s);
+      show(res.state === 'won-salt' ? 'closed-salt' : res.state === 'won-bagel' ? 'closed-bagel' : 'closed');
+    });
+  }
+  // First visit only: open once the cookie banner is out of the way (or after 1.5 s if it never shows).
+  function maybeOpen() {
+    var s = get();
+    if (s) return;                              // already played or closed
+    if (!document.getElementById('pbs-closed')) return;
+    var banner = document.getElementById('pb-consent');
+    var go = function () { setTimeout(open, 600); };
+    if (banner) { if (banner.hidden) go(); else { var mo = new MutationObserver(function () { if (banner.hidden) { mo.disconnect(); go(); } }); mo.observe(banner, { attributes: true, attributeFilter: ['hidden'] }); } }
+    else go();
+  }
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') { if (host) { if (host.innerHTML) close(); } } });
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', maybeOpen); else maybeOpen();
+  return { open: open, close: close, state: get, reset: function () { try { localStorage.removeItem(KEY); } catch (e) {} } };
+})();
+</script>
+</body></html>

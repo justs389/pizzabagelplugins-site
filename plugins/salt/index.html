@@ -31,11 +31,12 @@ h1[style*="font-weight: 400; white-space: nowrap"] { white-space: normal !import
 .hv7:hover{background: #e0785c; border-color: #e0785c; color: #fbf7ee;}
 .hv8:hover{background: #f3e3c6;}
 .hv9:hover{color: #e0785c; border-color: #e0785c;}
-.hv10:hover{background: #e0785c;}
-.hv11:hover{background: #e0785c; border-color: #e0785c; box-shadow: 5px 6px 0 #2a2622;}
-.hv12:hover{background: #eaf0fb; color: #1b2440;}
-.hv13:hover{background: #eaf0fb; border-color: #eaf0fb;}
-.hv14:hover{background: #fbf7ee; color: #2a2622; border-color: #fbf7ee;}
+.hv10:hover{background: #2a2622; color: #fbf7ee;}
+.hv11:hover{background: #e0785c;}
+.hv12:hover{background: #e0785c; border-color: #e0785c; box-shadow: 5px 6px 0 #2a2622;}
+.hv13:hover{background: #eaf0fb; color: #1b2440;}
+.hv14:hover{background: #eaf0fb; border-color: #eaf0fb;}
+.hv15:hover{background: #fbf7ee; color: #2a2622; border-color: #fbf7ee;}
 .af1::after{content: ''; position: absolute; left: -3px; right: -3px; top: 52%; height: 3px; border-radius: 2px; background: #c8392b; transform: rotate(-16deg);}</style><script src="https://assets.moonbase.sh/storefront/moonbase.js"></script></head><body><div style="min-height: 100vh; display: flex; flex-direction: column; font-family: 'Patrick Hand', cursive; color: #2a2622; background: #fbf7ee;">
 
   
@@ -134,7 +135,7 @@ h1[style*="font-weight: 400; white-space: nowrap"] { white-space: normal !import
             </div>
             
           </div>
-          <div style="position: sticky; top: 100px; display: flex; flex-direction: column; gap: 24px;">
+          <div style="position: sticky; top: 100px; display: flex; flex-direction: column; gap: 24px; align-self: start;">
           <aside style="border: 3px solid #2a2622; background: #fbf7ee; box-shadow: 6px 7px 0 #ecd3ae; padding: 26px; display: flex; flex-direction: column; gap: 18px;">
             <div style="display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap;">
               <h1 style="margin: 0; font-family: 'Caveat Brush', cursive; font-size: 52px; line-height: 1.05; font-weight: 400; white-space: nowrap;">Salt</h1>
@@ -193,6 +194,7 @@ h1[style*="font-weight: 400; white-space: nowrap"] { white-space: normal !import
           </div>
           </div>
         </div>
+        
       </section>
     
 
@@ -226,8 +228,8 @@ h1[style*="font-weight: 400; white-space: nowrap"] { white-space: normal !import
   </section>
 
   <footer style="background: #2a2622; color: #fbf7ee; border-top: 3px solid #2a2622;">
-    <div style="max-width: 1120px; margin: 0 auto; padding: 56px 24px 32px; display: grid; grid-template-columns: minmax(0, 1.4fr) repeat(2, minmax(150px, .6fr)); gap: 40px;">
-      <div style="display: flex; flex-direction: column; gap: 14px;">
+    <div style="max-width: 1120px; margin: 0 auto; padding: 56px 24px 32px; display: grid; grid-template-columns: repeat(auto-fit, minmax(clamp(calc(25% - 30px), calc((760px - 100%) * 999), 100%), 1fr)); gap: 40px;">
+      <div style="display: flex; flex-direction: column; gap: 14px; grid-column: 1 / -1; max-width: 520px;">
         <div style="display: flex; align-items: center; gap: 12px;">
           <img src="/assets/pizza-bagel-transparent-1280.png" alt="" style="width: 54px; height: 54px; display: block;">
           <a href="/about/" style="font-family: 'Caveat Brush', cursive; font-size: 30px; line-height: 1; white-space: nowrap; color: #fbf7ee;" class="hv1">About me</a>
@@ -261,7 +263,7 @@ h1[style*="font-weight: 400; white-space: nowrap"] { white-space: normal !import
 <template id="pbs-closed">
     <div onclick="PBS.close(event)" style="position: fixed; inset: 0; z-index: 60; background: rgba(42,38,34,.74); display: grid; place-items: center; padding: 24px 16px; overflow: auto; font-family: 'Patrick Hand', cursive; color: #2a2622;">
       <div onclick="event.stopPropagation()" style="position: relative; width: min(100%, 440px); background: #fbf7ee; border: 3px solid #2a2622; box-shadow: 8px 9px 0 #2a2622; transform: rotate(-1.2deg); padding: 30px 26px 24px; display: flex; flex-direction: column; gap: 18px;">
-        <div onclick="PBS.close(event)" aria-label="Close" style="position: absolute; top: -18px; right: -18px; width: 44px; height: 44px; border-radius: 50%; background: #2a2622; color: #fbf7ee; border: 3px solid #fbf7ee; display: grid; place-items: center; font-family: 'Patrick Hand SC', cursive; font-size: 24px; line-height: 1; cursor: pointer; user-select: none; z-index: 2;" class="hv10">×</div>
+        <div onclick="PBS.close(event)" aria-label="Close" style="position: absolute; top: -18px; right: -18px; width: 44px; height: 44px; border-radius: 50%; background: #2a2622; color: #fbf7ee; border: 3px solid #fbf7ee; display: grid; place-items: center; font-family: 'Patrick Hand SC', cursive; font-size: 24px; line-height: 1; cursor: pointer; user-select: none; z-index: 2;" class="hv11">×</div>
 
         
           <div style="display: flex; flex-direction: column; gap: 6px;">
@@ -297,7 +299,7 @@ h1[style*="font-weight: 400; white-space: nowrap"] { white-space: normal !import
 <template id="pbs-closed-salt">
     <div onclick="PBS.close(event)" style="position: fixed; inset: 0; z-index: 60; background: rgba(42,38,34,.74); display: grid; place-items: center; padding: 24px 16px; overflow: auto; font-family: 'Patrick Hand', cursive; color: #2a2622;">
       <div onclick="event.stopPropagation()" style="position: relative; width: min(100%, 440px); background: #fbf7ee; border: 3px solid #2a2622; box-shadow: 8px 9px 0 #2a2622; transform: rotate(-1.2deg); padding: 30px 26px 24px; display: flex; flex-direction: column; gap: 18px;">
-        <div onclick="PBS.close(event)" aria-label="Close" style="position: absolute; top: -18px; right: -18px; width: 44px; height: 44px; border-radius: 50%; background: #2a2622; color: #fbf7ee; border: 3px solid #fbf7ee; display: grid; place-items: center; font-family: 'Patrick Hand SC', cursive; font-size: 24px; line-height: 1; cursor: pointer; user-select: none; z-index: 2;" class="hv10">×</div>
+        <div onclick="PBS.close(event)" aria-label="Close" style="position: absolute; top: -18px; right: -18px; width: 44px; height: 44px; border-radius: 50%; background: #2a2622; color: #fbf7ee; border: 3px solid #fbf7ee; display: grid; place-items: center; font-family: 'Patrick Hand SC', cursive; font-size: 24px; line-height: 1; cursor: pointer; user-select: none; z-index: 2;" class="hv11">×</div>
 
         
           <div style="display: flex; flex-direction: column; gap: 6px;">
@@ -334,7 +336,7 @@ h1[style*="font-weight: 400; white-space: nowrap"] { white-space: normal !import
 <template id="pbs-closed-bagel">
     <div onclick="PBS.close(event)" style="position: fixed; inset: 0; z-index: 60; background: rgba(42,38,34,.74); display: grid; place-items: center; padding: 24px 16px; overflow: auto; font-family: 'Patrick Hand', cursive; color: #2a2622;">
       <div onclick="event.stopPropagation()" style="position: relative; width: min(100%, 440px); background: #fbf7ee; border: 3px solid #2a2622; box-shadow: 8px 9px 0 #2a2622; transform: rotate(-1.2deg); padding: 30px 26px 24px; display: flex; flex-direction: column; gap: 18px;">
-        <div onclick="PBS.close(event)" aria-label="Close" style="position: absolute; top: -18px; right: -18px; width: 44px; height: 44px; border-radius: 50%; background: #2a2622; color: #fbf7ee; border: 3px solid #fbf7ee; display: grid; place-items: center; font-family: 'Patrick Hand SC', cursive; font-size: 24px; line-height: 1; cursor: pointer; user-select: none; z-index: 2;" class="hv10">×</div>
+        <div onclick="PBS.close(event)" aria-label="Close" style="position: absolute; top: -18px; right: -18px; width: 44px; height: 44px; border-radius: 50%; background: #2a2622; color: #fbf7ee; border: 3px solid #fbf7ee; display: grid; place-items: center; font-family: 'Patrick Hand SC', cursive; font-size: 24px; line-height: 1; cursor: pointer; user-select: none; z-index: 2;" class="hv11">×</div>
 
         
           <div style="display: flex; flex-direction: column; gap: 6px;">
@@ -372,7 +374,7 @@ h1[style*="font-weight: 400; white-space: nowrap"] { white-space: normal !import
 <template id="pbs-won-10">
     <div onclick="PBS.close(event)" style="position: fixed; inset: 0; z-index: 60; background: rgba(42,38,34,.74); display: grid; place-items: center; padding: 24px 16px; overflow: auto; font-family: 'Patrick Hand', cursive; color: #2a2622;">
       <div onclick="event.stopPropagation()" style="position: relative; width: min(100%, 440px); background: #fbf7ee; border: 3px solid #2a2622; box-shadow: 8px 9px 0 #2a2622; transform: rotate(-1.2deg); padding: 30px 26px 24px; display: flex; flex-direction: column; gap: 18px;">
-        <div onclick="PBS.close(event)" aria-label="Close" style="position: absolute; top: -18px; right: -18px; width: 44px; height: 44px; border-radius: 50%; background: #2a2622; color: #fbf7ee; border: 3px solid #fbf7ee; display: grid; place-items: center; font-family: 'Patrick Hand SC', cursive; font-size: 24px; line-height: 1; cursor: pointer; user-select: none; z-index: 2;" class="hv10">×</div>
+        <div onclick="PBS.close(event)" aria-label="Close" style="position: absolute; top: -18px; right: -18px; width: 44px; height: 44px; border-radius: 50%; background: #2a2622; color: #fbf7ee; border: 3px solid #fbf7ee; display: grid; place-items: center; font-family: 'Patrick Hand SC', cursive; font-size: 24px; line-height: 1; cursor: pointer; user-select: none; z-index: 2;" class="hv11">×</div>
 
         
 
@@ -398,7 +400,7 @@ h1[style*="font-weight: 400; white-space: nowrap"] { white-space: normal !import
 <template id="pbs-won-salt">
     <div onclick="PBS.close(event)" style="position: fixed; inset: 0; z-index: 60; background: rgba(42,38,34,.74); display: grid; place-items: center; padding: 24px 16px; overflow: auto; font-family: 'Patrick Hand', cursive; color: #2a2622;">
       <div onclick="event.stopPropagation()" style="position: relative; width: min(100%, 440px); background: #fbf7ee; border: 3px solid #2a2622; box-shadow: 8px 9px 0 #2a2622; transform: rotate(-1.2deg); padding: 30px 26px 24px; display: flex; flex-direction: column; gap: 18px;">
-        <div onclick="PBS.close(event)" aria-label="Close" style="position: absolute; top: -18px; right: -18px; width: 44px; height: 44px; border-radius: 50%; background: #2a2622; color: #fbf7ee; border: 3px solid #fbf7ee; display: grid; place-items: center; font-family: 'Patrick Hand SC', cursive; font-size: 24px; line-height: 1; cursor: pointer; user-select: none; z-index: 2;" class="hv10">×</div>
+        <div onclick="PBS.close(event)" aria-label="Close" style="position: absolute; top: -18px; right: -18px; width: 44px; height: 44px; border-radius: 50%; background: #2a2622; color: #fbf7ee; border: 3px solid #fbf7ee; display: grid; place-items: center; font-family: 'Patrick Hand SC', cursive; font-size: 24px; line-height: 1; cursor: pointer; user-select: none; z-index: 2;" class="hv11">×</div>
 
         
 
@@ -413,8 +415,8 @@ h1[style*="font-weight: 400; white-space: nowrap"] { white-space: normal !import
             </div>
             <div data-scratch-code style="padding: 18px 16px; border: 3px dashed #f0c25c; background: #eaf0fb; color: #1b2440; text-align: center; font-family: 'Patrick Hand SC', cursive; font-size: 34px; letter-spacing: .16em; line-height: 1; user-select: all; overflow-wrap: anywhere;">__CODE__</div>
             <div style="display: flex; gap: 12px; flex-wrap: wrap;">
-              <a href="#" data-scratch-copy style="flex: 1 1 140px; text-align: center; padding: 14px 18px; background: transparent; color: #eaf0fb; border: 2.5px solid #eaf0fb; font-family: 'Patrick Hand SC', cursive; font-size: 17px; letter-spacing: .12em; white-space: nowrap;" class="hv12">COPY CODE</a>
-              <a href="/plugins/salt/" style="flex: 1 1 140px; text-align: center; padding: 14px 18px; background: #f0c25c; color: #1b2440; border: 2.5px solid #f0c25c; font-family: 'Patrick Hand SC', cursive; font-size: 17px; letter-spacing: .12em; white-space: nowrap;" class="hv13">REDEEM</a>
+              <a href="#" data-scratch-copy style="flex: 1 1 140px; text-align: center; padding: 14px 18px; background: transparent; color: #eaf0fb; border: 2.5px solid #eaf0fb; font-family: 'Patrick Hand SC', cursive; font-size: 17px; letter-spacing: .12em; white-space: nowrap;" class="hv13">COPY CODE</a>
+              <a href="/plugins/salt/" style="flex: 1 1 140px; text-align: center; padding: 14px 18px; background: #f0c25c; color: #1b2440; border: 2.5px solid #f0c25c; font-family: 'Patrick Hand SC', cursive; font-size: 17px; letter-spacing: .12em; white-space: nowrap;" class="hv14">REDEEM</a>
             </div>
             <div style="font-size: 15px; line-height: 1.45; color: #a9bce0;">Single-use code. Enter it at checkout and Salt is yours.</div>
           </div>
@@ -427,7 +429,7 @@ h1[style*="font-weight: 400; white-space: nowrap"] { white-space: normal !import
 <template id="pbs-won-bagel">
     <div onclick="PBS.close(event)" style="position: fixed; inset: 0; z-index: 60; background: rgba(42,38,34,.74); display: grid; place-items: center; padding: 24px 16px; overflow: auto; font-family: 'Patrick Hand', cursive; color: #2a2622;">
       <div onclick="event.stopPropagation()" style="position: relative; width: min(100%, 440px); background: #fbf7ee; border: 3px solid #2a2622; box-shadow: 8px 9px 0 #2a2622; transform: rotate(-1.2deg); padding: 30px 26px 24px; display: flex; flex-direction: column; gap: 18px;">
-        <div onclick="PBS.close(event)" aria-label="Close" style="position: absolute; top: -18px; right: -18px; width: 44px; height: 44px; border-radius: 50%; background: #2a2622; color: #fbf7ee; border: 3px solid #fbf7ee; display: grid; place-items: center; font-family: 'Patrick Hand SC', cursive; font-size: 24px; line-height: 1; cursor: pointer; user-select: none; z-index: 2;" class="hv10">×</div>
+        <div onclick="PBS.close(event)" aria-label="Close" style="position: absolute; top: -18px; right: -18px; width: 44px; height: 44px; border-radius: 50%; background: #2a2622; color: #fbf7ee; border: 3px solid #fbf7ee; display: grid; place-items: center; font-family: 'Patrick Hand SC', cursive; font-size: 24px; line-height: 1; cursor: pointer; user-select: none; z-index: 2;" class="hv11">×</div>
 
         
 
@@ -447,7 +449,7 @@ h1[style*="font-weight: 400; white-space: nowrap"] { white-space: normal !import
             <div data-scratch-code style="position: relative; padding: 18px 16px; border: 3px dashed #fbf7ee; background: #fbf7ee; color: #2a2622; text-align: center; font-family: 'Patrick Hand SC', cursive; font-size: 34px; letter-spacing: .16em; line-height: 1; user-select: all; overflow-wrap: anywhere;">__CODE__</div>
             <div style="position: relative; display: flex; gap: 12px; flex-wrap: wrap;">
               <a href="#" data-scratch-copy style="flex: 1 1 140px; text-align: center; padding: 14px 18px; background: transparent; color: #fbf7ee; border: 2.5px solid #fbf7ee; font-family: 'Patrick Hand SC', cursive; font-size: 17px; letter-spacing: .12em; white-space: nowrap;" class="hv3">COPY CODE</a>
-              <a href="/plugins/bundle/" style="flex: 1 1 140px; text-align: center; padding: 14px 18px; background: #e0785c; color: #fbf7ee; border: 2.5px solid #e0785c; font-family: 'Patrick Hand SC', cursive; font-size: 17px; letter-spacing: .12em; white-space: nowrap;" class="hv14">REDEEM</a>
+              <a href="/plugins/bundle/" style="flex: 1 1 140px; text-align: center; padding: 14px 18px; background: #e0785c; color: #fbf7ee; border: 2.5px solid #e0785c; font-family: 'Patrick Hand SC', cursive; font-size: 17px; letter-spacing: .12em; white-space: nowrap;" class="hv15">REDEEM</a>
             </div>
             <div style="position: relative; font-size: 15px; line-height: 1.45; color: #d9d0c0;">Single-use code. Enter it at checkout and the bundle is yours.</div>
           </div>
@@ -683,6 +685,32 @@ window.PBS = (function () {
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape') { if (host) { if (host.innerHTML) close(); } } });
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', maybeOpen); else maybeOpen();
   return { open: open, close: close, state: get, reset: function () { try { localStorage.removeItem(KEY); } catch (e) {} } };
+})();
+</script>
+
+<script>
+window.PBQ = (function () {
+  function step(e, dir) {
+    if (e) { if (e.preventDefault) e.preventDefault(); }
+    var slides = document.querySelectorAll('[data-qslide]'); if (!slides.length) return;
+    var cur = 0; for (var i = 0; i < slides.length; i++) { if (!slides[i].hidden) cur = i; }
+    var next = (cur + dir + slides.length) % slides.length;
+    slides[cur].hidden = true; slides[next].hidden = false;
+  }
+  // Instant jumps between snap points: smooth scrolling inside a scroll-snap container gets
+  // cancelled by the snap about every other click in Chrome (tested 2026-10-18).
+  function pq(e, dir) {
+    if (e) { if (e.preventDefault) e.preventDefault(); }
+    var el = e && e.target ? e.target : null, grid = null;
+    while (el) { grid = el.querySelector ? el.querySelector('[data-pq]') : null; if (grid) break; el = el.parentElement; }
+    if (!grid) return; if (!grid.children.length) return;
+    var n = grid.children.length, w = grid.children[0].getBoundingClientRect().width + 24;
+    var idx = Math.round(grid.scrollLeft / w), perView = Math.max(1, Math.round(grid.clientWidth / w));
+    var last = Math.max(0, n - perView), next = idx + dir;
+    if (next > last) next = 0; if (next < 0) next = last;
+    grid.scrollLeft = next * w;
+  }
+  return { step: step, pq: pq };
 })();
 </script>
 </body></html>

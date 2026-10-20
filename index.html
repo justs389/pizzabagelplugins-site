@@ -803,34 +803,55 @@ window.PBC = (function () {
   function get() { try { return localStorage.getItem(KEY); } catch (e) { return null; } }
   function put(v) { try { localStorage.setItem(KEY, v); } catch (e) {} }
   function box() { return document.getElementById('pb-consent'); }
-  function send(kind, name, data) { if (loaded) { try { window.fbq(kind, name, data || {}); } catch (e) {} } }
+  // eventId (the Moonbase order id) dedupes against any server-side send of the same event later.
+  function send(kind, name, data, eventId) { if (loaded) { try { if (eventId) window.fbq(kind, name, data || {}, { eventID: String(eventId) }); else window.fbq(kind, name, data || {}); } catch (e) {} } }
+  function amt(m) { return m && typeof m.amount === 'number' ? m.amount : undefined; }
+  // What the customer pays for a line: after discounts, before tax (Moonbase total.subtotal), else due, else list price.
   function items(order, cur) {
     var out = [], list = (order ? order.items : null) || [];
     for (var i = 0; i < list.length; i++) {
       var it = list[i], p = it.product || it.bundle || {}, price;
-      if (it.total) { if (it.total.due) price = it.total.due.amount; }
+      if (it.total) { price = amt(it.total.subtotal); if (price === undefined) price = amt(it.total.due); }
       if (price === undefined) { if (it.price) price = it.price[cur]; }
-      out.push({ id: p.id, name: p.name, quantity: it.quantity || 1, item_price: price });
+      out.push({ id: p.id || it.productId || it.bundleId, name: p.name, quantity: it.quantity || 1, item_price: price });
     }
     return out;
   }
   function ids(list) { var r = []; for (var i = 0; i < list.length; i++) r.push(list[i].id); return r; }
+  function names(list) { var r = []; for (var i = 0; i < list.length; i++) if (list[i].name) r.push(list[i].name); return r.join(', '); }
+  function orderCurrency(order, fallback) {
+    if (order) { if (order.currency) return order.currency; if (order.total) { if (order.total.due) { if (order.total.due.currency) return order.total.due.currency; } } }
+    return fallback;
+  }
+  // Paid amount for the order: after discounts, before tax; falls back to due, then to the line items.
+  function orderValue(order, list) {
+    var v;
+    if (order) { if (order.total) { v = amt(order.total.subtotal); if (v === undefined) v = amt(order.total.due); } }
+    if (v === undefined) { v = 0; for (var i = 0; i < list.length; i++) v += (list[i].item_price || 0) * (list[i].quantity || 1); }
+    return v;
+  }
   function hook() {
     if (hooked) return;
     var M = window.Moonbase;
     if (!M || !window.PB || !PB.ready || typeof M.on !== 'function') { if (tries++ < 60) setTimeout(hook, 250); return; }
     hooked = true;
     M.on('added-to-cart', function (e) {
-      var it = e.item || {}, p = it.product || it.bundle || {}, cur = e.currency, unit = it.price ? it.price[cur] : undefined;
-      send('track', 'AddToCart', { currency: cur, value: unit === undefined ? undefined : unit * (it.quantity || 1), content_ids: [p.id], content_name: p.name, content_type: 'product' });
+      var it = e.item || {}, p = it.product || it.bundle || {}, cur = e.currency || orderCurrency(e.order), list = items({ items: [it] }, cur);
+      var unit = list[0].item_price; if (unit === undefined) { if (it.price) unit = it.price[cur]; }
+      send('track', 'AddToCart', { currency: cur, value: unit === undefined ? undefined : unit * (it.quantity || 1), content_ids: ids(list), contents: list, content_name: p.name, content_type: 'product' });
     });
     M.on('checkout-initiated', function (e) {
-      var cur = e.total ? e.total.currency : undefined, list = items(e.order, cur);
-      send('track', 'InitiateCheckout', { currency: cur, value: e.total ? e.total.amount : undefined, num_items: list.length, content_ids: ids(list), contents: list, content_type: 'product' });
+      var cur = orderCurrency(e.order, e.total ? e.total.currency : undefined), list = items(e.order, cur);
+      var value = orderValue(e.order, list); if (value === undefined) { if (e.total) value = e.total.amount; }
+      send('track', 'InitiateCheckout', { currency: cur, value: value, num_items: list.length, content_ids: ids(list), contents: list, content_type: 'product' });
     });
+    // 2026-10-18: a $0 order (free Schmear) is NOT a Purchase, or Meta optimizes the ads toward
+    // free grabs; it goes out as the custom event FreeDownload instead. event_id = the order id.
     M.on('checkout-completed', function (e) {
-      var due = (e.order ? (e.order.total ? e.order.total.due : null) : null) || {}, list = items(e.order, due.currency);
-      send('track', 'Purchase', { currency: due.currency, value: due.amount, num_items: list.length, content_ids: ids(list), contents: list, content_type: 'product' });
+      var order = e.order || {}, cur = orderCurrency(order), list = items(order, cur), value = orderValue(order, list);
+      var data = { currency: cur, value: value, num_items: list.length, content_ids: ids(list), contents: list, content_name: names(list), content_type: 'product' };
+      if (value > 0) send('track', 'Purchase', data, order.id);
+      else send('trackCustom', 'FreeDownload', data, order.id);
     });
   }
   function load() {

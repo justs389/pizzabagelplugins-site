@@ -393,6 +393,7 @@ window.PB = {
         window.Moonbase.setup('https://pizza-bagel-plugins.moonbase.sh', {
           toolbar: { enabled: false },
           checkout: { redirect: 'auto' },
+          cart: { offers: { autoApply: true } },   // 2026-11-04: JJG Drive is $0 for JJG Vocals / bundle owners in the cart without clicking the offer card
           auth: { signUp: { marketingConsent: 'OptIn' } },
           theme: { dark: false, colors: { primary: '#e0785c', background: 'white' },
                    fonts: { heading: { family: "'Caveat Brush', cursive" }, body: { family: "'Patrick Hand', cursive" } },

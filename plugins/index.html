@@ -1,4 +1,12 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Plugins · Pizza Bagel Plugins</title><link rel="canonical" href="https://pizzabagelplugins.com/plugins/"><link rel="icon" type="image/png" sizes="192x192" href="/favicon.png"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><meta name="description" content="Plugins built by a producer for a quick and modern workflow. JJG Vocals, JJG Drive, Salt and Schmear, from platinum-selling producer Justin Gammella."><meta property="og:type" content="website"><meta property="og:site_name" content="Pizza Bagel Plugins"><meta property="og:title" content="Plugins · Pizza Bagel Plugins"><meta property="og:description" content="Plugins built by a producer for a quick and modern workflow. JJG Vocals, JJG Drive, Salt and Schmear, from platinum-selling producer Justin Gammella."><meta property="og:url" content="https://pizzabagelplugins.com/plugins/"><meta property="og:image" content="https://pizzabagelplugins.com/assets/pizza-bagel-four-2200.png"><meta name="twitter:card" content="summary_large_image"><link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Patrick+Hand+SC&family=Patrick+Hand&display=swap" rel="stylesheet"><style>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Plugins · Pizza Bagel Plugins</title><link rel="canonical" href="https://pizzabagelplugins.com/plugins/"><link rel="icon" type="image/png" sizes="192x192" href="/favicon.png"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><meta name="description" content="Plugins built by a producer for a quick and modern workflow. JJG Vocals, JJG Drive, Microwave, Salt and Schmear, from platinum-selling producer Justin Gammella."><meta property="og:type" content="website"><meta property="og:site_name" content="Pizza Bagel Plugins"><meta property="og:title" content="Plugins · Pizza Bagel Plugins"><meta property="og:description" content="Plugins built by a producer for a quick and modern workflow. JJG Vocals, JJG Drive, Microwave, Salt and Schmear, from platinum-selling producer Justin Gammella."><meta property="og:url" content="https://pizzabagelplugins.com/plugins/"><meta property="og:image" content="https://pizzabagelplugins.com/assets/pizza-bagel-five-2200.png"><meta name="twitter:card" content="summary_large_image"><link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Patrick+Hand+SC&family=Patrick+Hand&display=swap" rel="stylesheet"><style>
+.pb-mnav.pb-mnav-closed { display: none !important; }   /* 2026-11-15: phone menu starts closed (burger toggles) */
+/* 2026-11-15: the canvas puts the phone menu inside the no-wrap header row, where it opens sideways off
+   the screen; drop it down under the header instead */
+@media (max-width: 760px) {
+  .pb-hrow { position: relative; }
+  .pb-mnav { position: absolute; left: 0; right: 0; top: 100%; z-index: 60; background: #fbf7ee; padding: 0 16px;
+             border-bottom: 3px solid #2a2622; box-shadow: 0 8px 16px rgba(42,38,34,.15); }
+}
 body { margin: 0; background: #fbf7ee; color: #2a2622; }
 a { color: #2a2622; text-decoration: none; } a:hover { color: #e0785c; }
 input, select, textarea, button { font-family: inherit; }
@@ -25,10 +33,10 @@ h1[style*="font-weight: 400; white-space: nowrap"] { white-space: normal !import
 .hv1:hover{color: #e0785c;}
 .hv2:hover{background: #ecd3ae;}
 .hv3:hover{background: #fbf7ee; color: #2a2622;}
-.hv4:hover{background: #e0785c; border-color: #e0785c;}
-.hv5:hover{background: #fbf7ee;}
-.hv6:hover{background: #2a2622;}
-.hv7:hover{background: #e0785c; border-color: #e0785c; color: #fbf7ee;}
+.hv4:hover{background: #fbf7ee;}
+.hv5:hover{background: #3a342e;}
+.hv6:hover{background: #e0785c; border-color: #e0785c;}
+.hv7:hover{background: #2a2622;}
 .hv8:hover{background: #f3e3c6;}
 .hv9:hover{color: #e0785c; border-color: #e0785c;}
 .hv10:hover{background: #2a2622; color: #fbf7ee;}
@@ -40,17 +48,33 @@ h1[style*="font-weight: 400; white-space: nowrap"] { white-space: normal !import
 .af1::after{content: ''; position: absolute; left: -3px; right: -3px; top: 52%; height: 3px; border-radius: 2px; background: #c8392b; transform: rotate(-16deg);}</style><script src="https://assets.moonbase.sh/storefront/moonbase.js"></script></head><body><div style="min-height: 100vh; display: flex; flex-direction: column; font-family: 'Patrick Hand', cursive; color: #2a2622; background: #fbf7ee;">
 
   
-    <div style="background: #f0c25c; color: #2a2622; border-bottom: 2.5px solid #2a2622; padding: 9px 16px; font-family: 'Patrick Hand SC', cursive; font-size: 15px; letter-spacing: .12em; display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 6px 14px; text-align: center;"><span style="display: inline-block; padding: 2px 10px; background: #e0785c; color: #fbf7ee; border: 2px solid #2a2622; transform: rotate(-2deg); white-space: nowrap;">BLACK FRIDAY</span><span>UP TO 80% OFF (LIST PRICE). STARTS MONDAY, NOV 16. PLUS MICROWAVE, SCHMEAR 2.0 AND MB COMP IN JJG VOCALS.</span></div>
+    <div style="background: #f0c25c; color: #2a2622; border-bottom: 2.5px solid #2a2622; padding: 9px 16px; font-family: 'Patrick Hand SC', cursive; font-size: 15px; letter-spacing: .12em; display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 6px 14px; text-align: center;"><span style="display: inline-block; padding: 2px 10px; background: #e0785c; color: #fbf7ee; border: 2px solid #2a2622; transform: rotate(-2deg); white-space: nowrap;">BLACK FRIDAY</span><span class="pb-long">UP TO 80% OFF (LIST PRICE). MICROWAVE AND SCHMEAR 2.0 ARE OUT NOW, AND MB COMP IS A FREE UPDATE FOR JJG VOCALS USERS. NO CODE NEEDED.</span><span class="pb-short">UP TO 80% OFF. NO CODE NEEDED.</span></div>
   
 
+  <style>
+    .pb-burger, .pb-mnav, .pb-buybar, .pb-buyspace, .pb-short { display: none; }
+    @media (max-width: 760px) {
+      .pb-desk-nav { display: none !important; }
+      .pb-burger { display: flex !important; }
+      .pb-mnav { display: flex !important; }
+      .pb-buybar { display: flex !important; }
+      .pb-buyspace { display: block !important; }
+      .pb-word { font-size: 14px !important; letter-spacing: .06em !important; }
+      .pb-hrow { flex-wrap: nowrap !important; gap: 10px !important; padding: 10px 14px !important; }
+      .pb-hright { flex-wrap: nowrap !important; gap: 8px !important; }
+      .pb-burger-label, .pb-long { display: none !important; }
+      .pb-short { display: inline !important; }
+      .pb-logo { width: 36px !important; height: 36px !important; }
+    }
+  </style>
   <header style="border-bottom: 3px solid #2a2622; background: #fbf7ee; position: sticky; top: 0; z-index: 30;">
-    <div style="max-width: 1120px; margin: 0 auto; padding: 14px 24px; display: flex; align-items: center; gap: 20px 28px; flex-wrap: wrap;">
+    <div class="pb-hrow" style="max-width: 1120px; margin: 0 auto; padding: 14px 24px; display: flex; align-items: center; gap: 20px 28px; flex-wrap: wrap;">
       <a href="/" style="display: flex; align-items: center; gap: 12px; flex-shrink: 0; color: #2a2622;" class="hv1">
-        <img src="/assets/pizza-bagel-transparent-1280.png" alt="Pizza Bagel Plugins" style="width: 46px; height: 46px; display: block;">
-        <div style="font-family: 'Patrick Hand SC', cursive; font-size: 22px; letter-spacing: .12em; line-height: 1; white-space: nowrap;">PIZZA BAGEL PLUGINS</div>
+        <img class="pb-logo" src="/assets/pizza-bagel-transparent-1280.png" alt="Pizza Bagel Plugins" style="width: 46px; height: 46px; display: block;">
+        <div class="pb-word" style="font-family: 'Patrick Hand SC', cursive; font-size: 22px; letter-spacing: .12em; line-height: 1; white-space: nowrap;">PIZZA BAGEL PLUGINS</div>
       </a>
-      <div style="margin-left: auto; display: flex; align-items: center; justify-content: flex-end; gap: 12px 26px; flex-wrap: wrap;">
-      <nav style="display: flex; gap: 26px; flex-wrap: wrap; font-family: 'Patrick Hand SC', cursive; font-size: 17px; letter-spacing: .12em;">
+      <div class="pb-hright" style="margin-left: auto; display: flex; align-items: center; justify-content: flex-end; gap: 12px 26px; flex-wrap: wrap;">
+      <nav class="pb-desk-nav" style="display: flex; gap: 26px; flex-wrap: wrap; font-family: 'Patrick Hand SC', cursive; font-size: 17px; letter-spacing: .12em;">
         
           <a href="/" style="padding: 6px 0; border-bottom: 3px solid transparent; color: #2a2622;">HOME</a>
         
@@ -63,50 +87,71 @@ h1[style*="font-weight: 400; white-space: nowrap"] { white-space: normal !import
           <a href="#" href="#" onclick="PB.account(event)" style="padding: 6px 0; border-bottom: 3px solid transparent; color: #2a2622;">MY ACCOUNT</a>
         
       </nav>
+      <div class="pb-burger" onclick="document.querySelectorAll(&#x27;.pb-mnav&#x27;).forEach(n =&gt; n.classList.toggle(&#x27;pb-mnav-closed&#x27;))" aria-label="Menu" style="align-items: center; gap: 8px; padding: 6px 12px; border: 2.5px solid #2a2622; font-family: 'Patrick Hand SC', cursive; font-size: 15px; letter-spacing: .1em; cursor: pointer; user-select: none;"><span style="display: inline-flex; flex-direction: column; gap: 3px;"><span style="width: 16px; height: 2.5px; background: #2a2622;"></span><span style="width: 16px; height: 2.5px; background: #2a2622;"></span><span style="width: 16px; height: 2.5px; background: #2a2622;"></span></span><span class="pb-burger-label">MENU</span></div>
       <div onclick="PB.call(M =&gt; M.view_cart(), event)" style="display: flex; align-items: center; gap: 8px; padding: 6px 12px; border: 2.5px solid #2a2622; border-radius: 999px; font-family: 'Patrick Hand SC', cursive; font-size: 15px; letter-spacing: .1em; cursor: pointer; user-select: none; background: #fbf7ee; color: #2a2622;" class="hv2">
         <span>CART</span>
         <span data-moonbase-render="cart.item_count" style="min-width: 20px; height: 20px; border-radius: 50%; background: #e0785c; color: #fbf7ee; display: grid; place-items: center; font-size: 13px;">0</span>
       </div>
       </div>
+      
+        <nav class="pb-mnav pb-mnav-closed" style="flex-basis: 100%; flex-direction: column; gap: 0; border-top: 2px solid #2a2622; font-family: 'Patrick Hand SC', cursive; font-size: 19px; letter-spacing: .12em;">
+          
+            <a href="/" style="padding: 12px 0; border-bottom: 1px solid #ecd3ae; color: #2a2622;">HOME</a>
+          
+            <a href="/plugins/" style="padding: 12px 0; border-bottom: 1px solid #ecd3ae; color: #2a2622;">PLUGINS</a>
+          
+            <a href="/downloads/" style="padding: 12px 0; border-bottom: 1px solid #ecd3ae; color: #2a2622;">DOWNLOADS</a>
+          
+            <a href="/about/" style="padding: 12px 0; border-bottom: 1px solid #ecd3ae; color: #2a2622;">ABOUT</a>
+          
+            <a href="#" style="padding: 12px 0; border-bottom: 1px solid #ecd3ae; color: #2a2622;">MY ACCOUNT</a>
+          
+        </nav>
+      
     </div>
   </header>
 
+  
   <section style="background: #e0785c; color: #2a2622; border-bottom: 3px solid #2a2622;">
-    <style>@media (min-width: 960px) { .bf-grid { grid-template-columns: minmax(0, 5fr) minmax(0, 7fr) !important; } }</style>
+    <style>@media (min-width: 960px) { .bf-grid { grid-template-columns: minmax(0, 7fr) minmax(0, 5fr) !important; } }</style>
     <div class="bf-grid" style="max-width: 1200px; margin: 0 auto; padding: 26px 24px 32px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 430px), 1fr)); gap: 26px 44px; align-items: center;">
       <div style="display: flex; flex-direction: column; gap: 12px; align-items: flex-start; min-width: 0;">
         <span style="display: inline-block; padding: 4px 18px; background: #2a2622; color: #fbf7ee; border: 2.5px solid #2a2622; font-family: 'Patrick Hand SC', cursive; font-size: 20px; letter-spacing: .22em; transform: rotate(-2deg);">BLACK FRIDAY</span>
         <div style="display: flex; align-items: center; gap: 8px 14px; flex-wrap: wrap;">
           <span style="font-family: 'Caveat Brush', cursive; font-size: clamp(36px, 4.6vw, 54px); line-height: 1; color: #fbf7ee; text-shadow: 3px 3px 0 #2a2622;">Up to</span>
-          <span style="display: inline-block; padding: 0 22px 4px; background: #fbf7ee; color: #e0785c; border: 3px solid #2a2622; box-shadow: 5px 5px 0 #2a2622; transform: rotate(-2deg); font-family: 'Caveat Brush', cursive; font-size: clamp(52px, 7.4vw, 88px); line-height: 1.05; white-space: nowrap;">80% off</span>
+          <span style="display: inline-block; padding: 0 .22em .04em; background: #fbf7ee; color: #e0785c; border: 4px solid #2a2622; box-shadow: 7px 7px 0 #2a2622; transform: rotate(-2deg); font-family: 'Caveat Brush', cursive; font-size: clamp(84px, 13vw, 168px); line-height: 1.02; white-space: nowrap;">80% off</span>
           <span style="font-family: 'Patrick Hand', cursive; font-size: 20px; color: #2a2622;">(list price)</span>
         </div>
-        <div style="font-family: 'Caveat Brush', cursive; font-size: clamp(32px, 4vw, 46px); line-height: 1.05; color: #fbf7ee; text-shadow: 3px 3px 0 #2a2622;">Starts Monday, Nov 16</div>
-        <div style="font-family: 'Patrick Hand SC', cursive; font-size: 17px; letter-spacing: .12em; color: #2a2622; text-wrap: balance;">PLUS <span style="color: #fbf7ee;">TWO NEW TREATS</span> AND A <span style="color: #fbf7ee;">NEW MB COMP MODE</span> IN JJG VOCALS. INTRO PRICES ARE STILL ON UNTIL THEN.</div>
-        <a href="/plugins/" style="margin-top: 4px; padding: 12px 22px; background: #2a2622; color: #fbf7ee; border: 2.5px solid #2a2622; font-family: 'Patrick Hand SC', cursive; font-size: 17px; letter-spacing: .12em; white-space: nowrap; box-shadow: 4px 4px 0 #fbf7ee;" class="hv3">SHOP INTRO PRICES</a>
+        <div style="font-family: 'Caveat Brush', cursive; font-size: clamp(32px, 4vw, 46px); line-height: 1.05; color: #fbf7ee; text-shadow: 3px 3px 0 #2a2622;">Every plugin for $52</div>
+        <div style="font-family: 'Patrick Hand SC', cursive; font-size: 17px; letter-spacing: .12em; color: #2a2622; text-wrap: balance;">NEW <span style="color: #fbf7ee;">MICROWAVE</span>, <span style="color: #fbf7ee;">SCHMEAR 2.0</span> AND A <span style="color: #fbf7ee;">NEW MB COMP MODE</span> IN JJG VOCALS, A FREE UPDATE FOR EXISTING USERS. ALL OUT NOW. NO CODE NEEDED, PRICES DROP AUTOMATICALLY AT CHECKOUT.</div>
+        <div style="display: flex; gap: 12px; flex-wrap: wrap; margin-top: 4px;">
+          <div onclick="PB.call(M =&gt; M.add_to_cart({ bundle_id: &#x27;get-em-all&#x27;, show_cart: true }), event)" style="padding: 12px 22px; background: #2a2622; color: #fbf7ee; border: 2.5px solid #2a2622; font-family: 'Patrick Hand SC', cursive; font-size: 17px; letter-spacing: .12em; white-space: nowrap; box-shadow: 4px 4px 0 #fbf7ee; cursor: pointer; user-select: none;" class="hv3">GET 'EM ALL FOR $52</div>
+          <a href="/plugins/" style="padding: 12px 22px; background: transparent; color: #2a2622; border: 2.5px solid #2a2622; font-family: 'Patrick Hand SC', cursive; font-size: 17px; letter-spacing: .12em; white-space: nowrap;" class="hv4">SHOP THE SALE</a>
+        </div>
       </div>
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 22px 18px; align-items: end; min-width: 0;">
-        <div style="position: relative; padding-top: 40px; display: flex; flex-direction: column; align-items: center; gap: 8px; min-width: 0;">
-          <span style="position: absolute; top: 0; left: -4px; z-index: 1; padding: 5px 12px 6px; background: #f0c25c; border: 2.5px solid #2a2622; box-shadow: 3px 3px 0 #2a2622; font-family: 'Caveat Brush', cursive; font-size: clamp(17px, 2vw, 24px); line-height: 1; transform: rotate(-4deg); white-space: nowrap;">Coming Nov 16</span>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(118px, 1fr)); gap: 18px 14px; align-items: end; min-width: 0; max-width: 520px; justify-self: center; width: 100%;">
+        <div style="position: relative; padding-top: 52px; display: flex; flex-direction: column; align-items: center; gap: 8px; min-width: 0;">
+          <span style="position: absolute; top: 0; left: -4px; z-index: 1; display: flex; flex-direction: column; align-items: center; gap: 1px; padding: 4px 12px 6px; background: #f0c25c; border: 2.5px solid #2a2622; box-shadow: 3px 3px 0 #2a2622; transform: rotate(-4deg); white-space: nowrap;"><span style="font-family: 'Patrick Hand SC', cursive; font-size: clamp(10px, 1vw, 12px); letter-spacing: .16em; line-height: 1.2;">OUT NOW</span><span style="font-family: 'Caveat Brush', cursive; font-size: clamp(17px, 2vw, 24px); line-height: 1;">New!</span></span>
           <img src="/assets/bf-microwave.png" alt="Microwave, a cassette recorder plugin" style="display: block; width: 100%; height: auto; filter: drop-shadow(6px 6px 0 #2a2622);">
-          <div style="font-family: 'Caveat Brush', cursive; font-size: clamp(24px, 2.6vw, 32px); line-height: 1;">Microwave</div>
+          <div style="font-family: 'Caveat Brush', cursive; font-size: clamp(20px, 2vw, 26px); line-height: 1; text-align: center;">Microwave</div>
           <a href="/plugins/microwave/" style="font-family: 'Patrick Hand SC', cursive; font-size: 14px; letter-spacing: .12em; color: #2a2622; border-bottom: 2px solid #2a2622; white-space: nowrap;">PLAY WITH IT NOW →</a>
         </div>
         <div style="position: relative; padding-top: 52px; display: flex; flex-direction: column; align-items: center; gap: 8px; min-width: 0;">
-          <span style="position: absolute; top: 0; right: -4px; z-index: 1; display: flex; flex-direction: column; align-items: center; gap: 1px; padding: 4px 12px 6px; background: #f0c25c; border: 2.5px solid #2a2622; box-shadow: 3px 3px 0 #2a2622; transform: rotate(3deg); white-space: nowrap;"><span style="font-family: 'Patrick Hand SC', cursive; font-size: clamp(10px, 1vw, 12px); letter-spacing: .16em; line-height: 1.2;">FREE UPDATE</span><span style="font-family: 'Caveat Brush', cursive; font-size: clamp(17px, 2vw, 24px); line-height: 1;">Coming Nov 16</span></span>
-          <img src="/assets/bf-schmear-2.png" alt="Schmear 2.0 with the new Berry chorus" style="display: block; width: 100%; height: auto; border: 2.5px solid #2a2622; box-sizing: border-box; box-shadow: 6px 6px 0 #2a2622;">
-          <div style="font-family: 'Caveat Brush', cursive; font-size: clamp(24px, 2.6vw, 32px); line-height: 1;">Schmear <span style="color: #fbf7ee;">2.0</span></div>
+          <span style="position: absolute; top: 0; right: -4px; z-index: 1; display: flex; flex-direction: column; align-items: center; gap: 1px; padding: 4px 12px 6px; background: #f0c25c; border: 2.5px solid #2a2622; box-shadow: 3px 3px 0 #2a2622; transform: rotate(3deg); white-space: nowrap;"><span style="font-family: 'Patrick Hand SC', cursive; font-size: clamp(10px, 1vw, 12px); letter-spacing: .16em; line-height: 1.2;">FREE UPDATE</span><span style="font-family: 'Caveat Brush', cursive; font-size: clamp(17px, 2vw, 24px); line-height: 1;">Out now</span></span>
+          <img src="/assets/schmear-2.png" alt="Schmear 2.0 with the new Berry chorus" style="display: block; width: 100%; height: auto; border: 2.5px solid #2a2622; box-sizing: border-box; box-shadow: 6px 6px 0 #2a2622;">
+          <div style="font-family: 'Caveat Brush', cursive; font-size: clamp(20px, 2vw, 26px); line-height: 1; text-align: center;">Schmear <span style="color: #fbf7ee;">2.0</span></div>
           <a href="/plugins/schmear/" style="font-family: 'Patrick Hand SC', cursive; font-size: 14px; letter-spacing: .12em; color: #2a2622; border-bottom: 2px solid #2a2622; white-space: nowrap;">PLAY WITH IT NOW →</a>
         </div>
         <div style="position: relative; padding-top: 52px; display: flex; flex-direction: column; align-items: center; gap: 8px; min-width: 0;">
-          <span style="position: absolute; top: 0; right: -4px; z-index: 1; display: flex; flex-direction: column; align-items: center; gap: 1px; padding: 4px 12px 6px; background: #f0c25c; border: 2.5px solid #2a2622; box-shadow: 3px 3px 0 #2a2622; transform: rotate(-3deg); white-space: nowrap;"><span style="font-family: 'Patrick Hand SC', cursive; font-size: clamp(10px, 1vw, 12px); letter-spacing: .16em; line-height: 1.2;">NEW MB COMP MODE</span><span style="font-family: 'Caveat Brush', cursive; font-size: clamp(17px, 2vw, 24px); line-height: 1;">Coming Nov 16</span></span>
-          <img src="/assets/bf-jjg-120.png" alt="JJG Vocals 1.2.0 with the new MB COMP multiband compressor" style="display: block; width: 100%; height: auto; border: 2.5px solid #2a2622; box-sizing: border-box; box-shadow: 6px 6px 0 #2a2622;">
-          <div style="font-family: 'Caveat Brush', cursive; font-size: clamp(24px, 2.6vw, 32px); line-height: 1; text-align: center;">JJG Vocals</div>
+          <span style="position: absolute; top: 0; right: -4px; z-index: 1; display: flex; flex-direction: column; align-items: center; gap: 1px; padding: 4px 12px 6px; background: #f0c25c; border: 2.5px solid #2a2622; box-shadow: 3px 3px 0 #2a2622; transform: rotate(-3deg); white-space: nowrap;"><span style="font-family: 'Patrick Hand SC', cursive; font-size: clamp(10px, 1vw, 12px); letter-spacing: .16em; line-height: 1.2;">NEW MB COMP MODE</span><span style="font-family: 'Caveat Brush', cursive; font-size: clamp(17px, 2vw, 24px); line-height: 1;">Free update</span></span>
+          <img src="/assets/jjg-vocals-v120.png" alt="JJG Vocals 1.2.0 with the new MB COMP multiband compressor" style="display: block; width: 100%; height: auto; border: 2.5px solid #2a2622; box-sizing: border-box; box-shadow: 6px 6px 0 #2a2622;">
+          <div style="font-family: 'Caveat Brush', cursive; font-size: clamp(20px, 2vw, 26px); line-height: 1; text-align: center;">JJG Vocals</div>
           <a href="/plugins/jjg-vocals/" style="font-family: 'Patrick Hand SC', cursive; font-size: 14px; letter-spacing: .12em; color: #2a2622; border-bottom: 2px solid #2a2622; white-space: nowrap;">PLAY WITH IT NOW →</a>
         </div>
       </div>
     </div>
   </section>
+  
 
   <main style="flex: 1;">
 
@@ -116,21 +161,19 @@ h1[style*="font-weight: 400; white-space: nowrap"] { white-space: normal !import
       <section style="max-width: 1120px; margin: 0 auto; padding: 56px 24px 80px; display: flex; flex-direction: column; gap: 32px;">
         <div style="display: flex; flex-direction: column; gap: 10px; border-bottom: 3px solid #2a2622; padding-bottom: 18px;">
           <h1 style="margin: 0; font-family: 'Caveat Brush', cursive; font-size: 64px; line-height: 1; font-weight: 400;">Plugins</h1>
-          <div style="font-size: 19px; color: #4a443d;">Four so far. More on the way. Every paid plugin has a full 28-day free trial. VST3 · AU · AAX for macOS (Intel &amp; Apple silicon) and Windows.</div>
+          <div style="font-size: 19px; color: #4a443d;">Five so far. More on the way. Every paid plugin has a full 28-day free trial. VST3 · AU · AAX for macOS (Intel &amp; Apple silicon) and Windows.</div>
         </div>
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(clamp(calc(33.33% - 22px), calc((840px - 100%) * 999), 100%), 1fr)); gap: 32px;">
           
             <a href="/plugins/jjg-vocals/" style="display: flex; flex-direction: column; gap: 14px; color: #2a2622;">
               <div style="position: relative; border: 3px solid #2a2622; background: #ece5d8; padding: 28px; display: grid; place-items: center; aspect-ratio: 4 / 3; overflow: hidden;">
                 <img src="/assets/jjg-vocals-v120.png" alt="JJG Vocals" style="position: absolute; inset: 28px; width: calc(100% - 56px); height: calc(100% - 56px); object-fit: contain; box-sizing: border-box; filter: drop-shadow(2px 0 0 #2a2622) drop-shadow(-2px 0 0 #2a2622) drop-shadow(0 2px 0 #2a2622) drop-shadow(0 -2px 0 #2a2622) drop-shadow(0 14px 14px rgba(42,38,34,.35));">
-                <div style="position: absolute; right: 14px; top: 14px; padding: 8px 12px; background: #2a2622; color: #fbf7ee; border: 2px solid #2a2622; font-family: 'Patrick Hand SC', cursive; font-size: 13px; letter-spacing: .14em; line-height: 1.3;">INTRO PRICE</div><div style="position: absolute; left: 12px; top: 12px; z-index: 1; display: flex; flex-direction: column; align-items: center; gap: 1px; padding: 4px 12px 6px; background: #f0c25c; color: #2a2622; border: 2.5px solid #2a2622; box-shadow: 3px 3px 0 #2a2622; transform: rotate(-3deg); max-width: calc(100% - 150px); box-sizing: border-box; text-align: center;"><span style="font-family: 'Patrick Hand SC', cursive; font-size: 12px; letter-spacing: .14em; line-height: 1.2;">NEW MULTIBAND COMP MODULE</span><span style="font-family: 'Caveat Brush', cursive; font-size: 24px; line-height: 1;">Nov 16</span></div>
+                
+                <div style="position: absolute; top: 30px; right: -54px; width: 230px; padding: 9px 0 7px; transform: rotate(45deg); background: #e0785c; color: #fbf7ee; border-top: 3px solid #2a2622; border-bottom: 3px solid #2a2622; text-align: center; font-family: 'Caveat Brush', cursive; font-size: 30px; line-height: 1; box-shadow: 0 4px 0 rgba(42,38,34,.25);">77% OFF</div>
+                <div style="position: absolute; left: 12px; top: 12px; z-index: 1; display: flex; flex-direction: column; align-items: center; gap: 1px; padding: 4px 14px 6px; background: #f0c25c; color: #2a2622; border: 2.5px solid #2a2622; box-shadow: 3px 3px 0 #2a2622; transform: rotate(-3deg); max-width: calc(100% - 150px); box-sizing: border-box; text-align: center;"><span style="font-family: 'Patrick Hand SC', cursive; font-size: 12px; letter-spacing: .14em; line-height: 1.2;">NEW MB COMP MODE</span><span style="font-family: 'Caveat Brush', cursive; font-size: 30px; line-height: 1;">Free update</span></div>
                 <div style="position: absolute; right: 14px; bottom: 14px; display: flex; align-items: center; gap: 8px; padding: 8px 14px; background: #e0785c; color: #fbf7ee; border: 2px solid #2a2622; font-family: 'Patrick Hand SC', cursive; font-size: 14px; letter-spacing: .14em;"><span style="display: inline-block; width: 0; height: 0; border-top: 7px solid transparent; border-bottom: 7px solid transparent; border-left: 11px solid currentColor;"></span>TRY IT, HEAR IT</div>
               </div>
               <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 12px;">
-                
-                
-                  <div style="align-self: stretch; margin-top: -14px; display: flex; align-items: center; justify-content: center; gap: 10px; padding: 9px 14px; background: #e0785c; color: #fbf7ee; border: 3px solid #2a2622; border-top: 0; box-shadow: 4px 4px 0 #2a2622; font-family: 'Caveat Brush', cursive; font-size: 26px; line-height: 1; text-shadow: 2px 2px 0 #2a2622; white-space: nowrap;">28-day free trial<span style="font-family: 'Patrick Hand SC', cursive; font-size: 12px; letter-spacing: .16em; text-shadow: none; color: #2a2622; padding: 3px 7px; background: #fbf7ee;">NO CARD</span></div>
-                
                 <div style="display: flex; align-items: baseline; flex-wrap: wrap; gap: 4px 14px;">
                   <div style="font-family: 'Caveat Brush', cursive; font-size: 34px; line-height: 1; white-space: nowrap;">JJG Vocals</div>
                   <div style="font-size: 17px; color: #8a8378; white-space: nowrap;">channel strip</div>
@@ -138,43 +181,49 @@ h1[style*="font-weight: 400; white-space: nowrap"] { white-space: normal !import
                 <div style="display: flex; align-items: center; gap: 18px;">
                 <span style="display: flex; flex-direction: column; align-items: flex-start; gap: 5px; font-family: 'Patrick Hand SC', cursive; letter-spacing: .1em; white-space: nowrap;">
                   <span style="display: flex; align-items: baseline; gap: 6px; font-size: 14px; line-height: 1; color: #6b645b;">REG. <span style="position: relative; display: inline-block; padding: 0 2px; font-family: 'Caveat Brush', cursive; font-size: 30px; letter-spacing: 0; color: #6b645b;" class="af1">$150</span></span>
-                  <span style="font-size: 13px; line-height: 1; padding: 4px 8px 3px; background: #2a2622; color: #fbf7ee;">INTRO PRICE · SAVE $101</span>
+                  <span style="font-size: 13px; line-height: 1; padding: 4px 8px 3px; background: #2a2622; color: #fbf7ee;">BLACK FRIDAY · SAVE $115</span>
                 </span>
-                <span style="font-family: 'Caveat Brush', cursive; font-size: 60px; line-height: .85; color: #e0785c; white-space: nowrap;">$49</span>
+                <span style="font-family: 'Caveat Brush', cursive; font-size: 60px; line-height: .85; color: #e0785c; white-space: nowrap;">$35</span>
                 </div>
               </div>
-              <p style="margin: 0; font-size: 17px; line-height: 1.4; color: #4a443d; text-wrap: pretty;">A complete vocal channel in one plugin, laid out like a rack of hardware modules in signal order. Preamp, tape, compressor, EQ, de-esser, Salt enhancer, output. Each one has a plate that picks its circuit. Made for vocals, and it shines on drums, bass, guitars and synths too. NEW MB COMP mode arrives Monday, Nov 16.</p>
+              <p style="margin: 0; font-size: 17px; line-height: 1.4; color: #4a443d; text-wrap: pretty;">A complete vocal channel in one plugin, laid out like a rack of hardware modules in signal order. Preamp, tape, compressor, EQ, de-esser, Salt enhancer, output. Each one has a plate that picks its circuit. Made for vocals, and it shines on drums, bass, guitars and synths too. New in 1.2.0: MB COMP, a multiband compressor with five flavors, free for existing users.</p>
+              
             </a>
           
             <a href="/plugins/microwave/" style="display: flex; flex-direction: column; gap: 14px; color: #2a2622;">
               <div style="position: relative; border: 3px solid #2a2622; background: #ece5d8; padding: 28px; display: grid; place-items: center; aspect-ratio: 4 / 3; overflow: hidden;">
                 <img src="/assets/bf-microwave.png" alt="Microwave" style="position: absolute; inset: 28px; width: calc(100% - 56px); height: calc(100% - 56px); object-fit: contain; box-sizing: border-box; filter: drop-shadow(2px 0 0 #2a2622) drop-shadow(-2px 0 0 #2a2622) drop-shadow(0 2px 0 #2a2622) drop-shadow(0 -2px 0 #2a2622) drop-shadow(0 14px 14px rgba(42,38,34,.35));">
-                <div style="position: absolute; left: 12px; top: 12px; z-index: 1; display: flex; flex-direction: column; align-items: center; gap: 1px; padding: 4px 12px 6px; background: #f0c25c; color: #2a2622; border: 2.5px solid #2a2622; box-shadow: 3px 3px 0 #2a2622; transform: rotate(-3deg); max-width: calc(100% - 150px); box-sizing: border-box; text-align: center;"><span style="font-family: 'Patrick Hand SC', cursive; font-size: 12px; letter-spacing: .14em; line-height: 1.2;">OUT NOV 16</span><span style="font-family: 'Caveat Brush', cursive; font-size: 24px; line-height: 1;">New!</span></div>
+                
+                <div style="position: absolute; top: 30px; right: -54px; width: 230px; padding: 9px 0 7px; transform: rotate(45deg); background: #e0785c; color: #fbf7ee; border-top: 3px solid #2a2622; border-bottom: 3px solid #2a2622; text-align: center; font-family: 'Caveat Brush', cursive; font-size: 30px; line-height: 1; box-shadow: 0 4px 0 rgba(42,38,34,.25);">58% OFF</div>
+                <div style="position: absolute; left: 12px; top: 12px; z-index: 1; display: flex; flex-direction: column; align-items: center; gap: 1px; padding: 4px 14px 6px; background: #f0c25c; color: #2a2622; border: 2.5px solid #2a2622; box-shadow: 3px 3px 0 #2a2622; transform: rotate(-3deg); max-width: calc(100% - 150px); box-sizing: border-box; text-align: center;"><span style="font-family: 'Patrick Hand SC', cursive; font-size: 12px; letter-spacing: .14em; line-height: 1.2;">OUT NOW</span><span style="font-family: 'Caveat Brush', cursive; font-size: 30px; line-height: 1;">New!</span></div>
                 <div style="position: absolute; right: 14px; bottom: 14px; display: flex; align-items: center; gap: 8px; padding: 8px 14px; background: #e0785c; color: #fbf7ee; border: 2px solid #2a2622; font-family: 'Patrick Hand SC', cursive; font-size: 14px; letter-spacing: .14em;"><span style="display: inline-block; width: 0; height: 0; border-top: 7px solid transparent; border-bottom: 7px solid transparent; border-left: 11px solid currentColor;"></span>TRY IT, HEAR IT</div>
               </div>
               <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 12px;">
-                <div style="align-self: stretch; margin-top: -14px; display: flex; align-items: center; justify-content: center; gap: 10px; padding: 9px 14px; background: #f0c25c; color: #2a2622; border: 3px solid #2a2622; border-top: 0; box-shadow: 4px 4px 0 #2a2622; font-family: 'Caveat Brush', cursive; font-size: 26px; line-height: 1; white-space: nowrap;">Coming Nov 16</div>
-                
                 <div style="display: flex; align-items: baseline; flex-wrap: wrap; gap: 4px 14px;">
                   <div style="font-family: 'Caveat Brush', cursive; font-size: 34px; line-height: 1; white-space: nowrap;">Microwave</div>
                   <div style="font-size: 17px; color: #8a8378; white-space: nowrap;">cassette recorder</div>
                 </div>
-                
+                <div style="display: flex; align-items: center; gap: 18px;">
+                <span style="display: flex; flex-direction: column; align-items: flex-start; gap: 5px; font-family: 'Patrick Hand SC', cursive; letter-spacing: .1em; white-space: nowrap;">
+                  <span style="display: flex; align-items: baseline; gap: 6px; font-size: 14px; line-height: 1; color: #6b645b;">REG. <span style="position: relative; display: inline-block; padding: 0 2px; font-family: 'Caveat Brush', cursive; font-size: 30px; letter-spacing: 0; color: #6b645b;" class="af1">$59</span></span>
+                  <span style="font-size: 13px; line-height: 1; padding: 4px 8px 3px; background: #2a2622; color: #fbf7ee;">BLACK FRIDAY · SAVE $34</span>
+                </span>
+                <span style="font-family: 'Caveat Brush', cursive; font-size: 60px; line-height: .85; color: #e0785c; white-space: nowrap;">$25</span>
+                </div>
               </div>
-              <p style="margin: 0; font-size: 17px; line-height: 1.4; color: #4a443d; text-wrap: pretty;">Modeled after a cheap 90s cassette recorder that we extensively modeled: the tape, the built-in mic, the tiny speaker and all. Noon is the real machine. Past noon it falls apart.</p>
+              <p style="margin: 0; font-size: 17px; line-height: 1.4; color: #4a443d; text-wrap: pretty;">A cheap 90s cassette recorder, modeled. Noon is the real machine. Past noon it falls apart.</p>
+              <div style="font-size: 16px; line-height: 1.4; color: #2a2622; padding: 8px 12px; background: #f3d9d2; border: 2px solid #2a2622; text-wrap: pretty;">Own the Everything Bagel? Microwave is $15 for you. Sign in and the price drops automatically at checkout.</div>
             </a>
           
             <a href="/plugins/salt/" style="display: flex; flex-direction: column; gap: 14px; color: #2a2622;">
               <div style="position: relative; border: 3px solid #2a2622; background: #ece5d8; padding: 28px; display: grid; place-items: center; aspect-ratio: 4 / 3; overflow: hidden;">
                 <img src="/assets/salt-3x.png" alt="Salt" style="position: absolute; inset: 28px; width: calc(100% - 56px); height: calc(100% - 56px); object-fit: contain; box-sizing: border-box; filter: drop-shadow(2px 0 0 #2a2622) drop-shadow(-2px 0 0 #2a2622) drop-shadow(0 2px 0 #2a2622) drop-shadow(0 -2px 0 #2a2622) drop-shadow(0 14px 14px rgba(42,38,34,.35));">
-                <div style="position: absolute; right: 14px; top: 14px; padding: 8px 12px; background: #2a2622; color: #fbf7ee; border: 2px solid #2a2622; font-family: 'Patrick Hand SC', cursive; font-size: 13px; letter-spacing: .14em; line-height: 1.3;">INTRO PRICE</div>
+                
+                <div style="position: absolute; top: 30px; right: -54px; width: 230px; padding: 9px 0 7px; transform: rotate(45deg); background: #e0785c; color: #fbf7ee; border-top: 3px solid #2a2622; border-bottom: 3px solid #2a2622; text-align: center; font-family: 'Caveat Brush', cursive; font-size: 30px; line-height: 1; box-shadow: 0 4px 0 rgba(42,38,34,.25);">69% OFF</div>
+                
                 <div style="position: absolute; right: 14px; bottom: 14px; display: flex; align-items: center; gap: 8px; padding: 8px 14px; background: #e0785c; color: #fbf7ee; border: 2px solid #2a2622; font-family: 'Patrick Hand SC', cursive; font-size: 14px; letter-spacing: .14em;"><span style="display: inline-block; width: 0; height: 0; border-top: 7px solid transparent; border-bottom: 7px solid transparent; border-left: 11px solid currentColor;"></span>TRY IT, HEAR IT</div>
               </div>
               <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 12px;">
-                
-                
-                  <div style="align-self: stretch; margin-top: -14px; display: flex; align-items: center; justify-content: center; gap: 10px; padding: 9px 14px; background: #e0785c; color: #fbf7ee; border: 3px solid #2a2622; border-top: 0; box-shadow: 4px 4px 0 #2a2622; font-family: 'Caveat Brush', cursive; font-size: 26px; line-height: 1; text-shadow: 2px 2px 0 #2a2622; white-space: nowrap;">28-day free trial<span style="font-family: 'Patrick Hand SC', cursive; font-size: 12px; letter-spacing: .16em; text-shadow: none; color: #2a2622; padding: 3px 7px; background: #fbf7ee;">NO CARD</span></div>
-                
                 <div style="display: flex; align-items: baseline; flex-wrap: wrap; gap: 4px 14px;">
                   <div style="font-family: 'Caveat Brush', cursive; font-size: 34px; line-height: 1; white-space: nowrap;">Salt</div>
                   <div style="font-size: 17px; color: #8a8378; white-space: nowrap;">enhancer</div>
@@ -182,23 +231,24 @@ h1[style*="font-weight: 400; white-space: nowrap"] { white-space: normal !import
                 <div style="display: flex; align-items: center; gap: 18px;">
                 <span style="display: flex; flex-direction: column; align-items: flex-start; gap: 5px; font-family: 'Patrick Hand SC', cursive; letter-spacing: .1em; white-space: nowrap;">
                   <span style="display: flex; align-items: baseline; gap: 6px; font-size: 14px; line-height: 1; color: #6b645b;">REG. <span style="position: relative; display: inline-block; padding: 0 2px; font-family: 'Caveat Brush', cursive; font-size: 30px; letter-spacing: 0; color: #6b645b;" class="af1">$49</span></span>
-                  <span style="font-size: 13px; line-height: 1; padding: 4px 8px 3px; background: #2a2622; color: #fbf7ee;">INTRO PRICE · SAVE $30</span>
+                  <span style="font-size: 13px; line-height: 1; padding: 4px 8px 3px; background: #2a2622; color: #fbf7ee;">BLACK FRIDAY · SAVE $34</span>
                 </span>
-                <span style="font-family: 'Caveat Brush', cursive; font-size: 60px; line-height: .85; color: #e0785c; white-space: nowrap;">$19</span>
+                <span style="font-family: 'Caveat Brush', cursive; font-size: 60px; line-height: .85; color: #e0785c; white-space: nowrap;">$15</span>
                 </div>
               </div>
               <p style="margin: 0; font-size: 17px; line-height: 1.4; color: #4a443d; text-wrap: pretty;">An enhancer built from half a companding circuit. Quiet passages open up, loud ones are left alone, nothing turns harsh. Two curves, two directions, one Flavor knob.</p>
+              
             </a>
           
             <a href="/plugins/schmear/" style="display: flex; flex-direction: column; gap: 14px; color: #2a2622;">
               <div style="position: relative; border: 3px solid #2a2622; background: #ece5d8; padding: 28px; display: grid; place-items: center; aspect-ratio: 4 / 3; overflow: hidden;">
                 <img src="/assets/schmear-2.png" alt="Schmear" style="position: absolute; inset: 28px; width: calc(100% - 56px); height: calc(100% - 56px); object-fit: contain; box-sizing: border-box; filter: drop-shadow(2px 0 0 #2a2622) drop-shadow(-2px 0 0 #2a2622) drop-shadow(0 2px 0 #2a2622) drop-shadow(0 -2px 0 #2a2622) drop-shadow(0 14px 14px rgba(42,38,34,.35));">
-                <div style="position: absolute; right: 14px; top: 14px; padding: 8px 12px; background: #2a2622; color: #fbf7ee; border: 2px solid #2a2622; font-family: 'Patrick Hand SC', cursive; font-size: 13px; letter-spacing: .14em; line-height: 1.3;">FREE FOR LAUNCH</div><div style="position: absolute; left: 12px; top: 12px; z-index: 1; display: flex; flex-direction: column; align-items: center; gap: 1px; padding: 4px 12px 6px; background: #f0c25c; color: #2a2622; border: 2.5px solid #2a2622; box-shadow: 3px 3px 0 #2a2622; transform: rotate(-3deg); max-width: calc(100% - 150px); box-sizing: border-box; text-align: center;"><span style="font-family: 'Patrick Hand SC', cursive; font-size: 12px; letter-spacing: .14em; line-height: 1.2;">NEW BERRY MODE</span><span style="font-family: 'Caveat Brush', cursive; font-size: 24px; line-height: 1;">Nov 16</span></div>
+                <div style="position: absolute; right: 14px; top: 14px; padding: 8px 12px; background: #2a2622; color: #fbf7ee; border: 2px solid #2a2622; font-family: 'Patrick Hand SC', cursive; font-size: 13px; letter-spacing: .14em; line-height: 1.3;">FREE</div>
+                
+                <div style="position: absolute; left: 12px; top: 12px; z-index: 1; display: flex; flex-direction: column; align-items: center; gap: 1px; padding: 4px 14px 6px; background: #f0c25c; color: #2a2622; border: 2.5px solid #2a2622; box-shadow: 3px 3px 0 #2a2622; transform: rotate(-3deg); max-width: calc(100% - 150px); box-sizing: border-box; text-align: center;"><span style="font-family: 'Patrick Hand SC', cursive; font-size: 12px; letter-spacing: .14em; line-height: 1.2;">NEW BERRY MODE</span><span style="font-family: 'Caveat Brush', cursive; font-size: 30px; line-height: 1;">Out now</span></div>
                 <div style="position: absolute; right: 14px; bottom: 14px; display: flex; align-items: center; gap: 8px; padding: 8px 14px; background: #e0785c; color: #fbf7ee; border: 2px solid #2a2622; font-family: 'Patrick Hand SC', cursive; font-size: 14px; letter-spacing: .14em;"><span style="display: inline-block; width: 0; height: 0; border-top: 7px solid transparent; border-bottom: 7px solid transparent; border-left: 11px solid currentColor;"></span>TRY IT, HEAR IT</div>
               </div>
               <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 12px;">
-                
-                
                 <div style="display: flex; align-items: baseline; flex-wrap: wrap; gap: 4px 14px;">
                   <div style="font-family: 'Caveat Brush', cursive; font-size: 34px; line-height: 1; white-space: nowrap;">Schmear</div>
                   <div style="font-size: 17px; color: #8a8378; white-space: nowrap;">widener &amp; chorus</div>
@@ -211,20 +261,19 @@ h1[style*="font-weight: 400; white-space: nowrap"] { white-space: normal !import
                 <span style="font-family: 'Caveat Brush', cursive; font-size: 60px; line-height: .85; color: #e0785c; white-space: nowrap;">Free</span>
                 </div>
               </div>
-              <p style="margin: 0; font-size: 17px; line-height: 1.4; color: #4a443d; text-wrap: pretty;">A widener and chorus with two flavors. Lox is the detune widener I use on 99% of my vocals. Berry is a vintage stereo chorus, new in Schmear 2.0 on Monday, Nov 16.</p>
+              <p style="margin: 0; font-size: 17px; line-height: 1.4; color: #4a443d; text-wrap: pretty;">A widener and chorus with two flavors. Lox is the detune widener I use on 99% of my vocals. Berry is a vintage stereo chorus.</p>
+              
             </a>
           
             <a href="/plugins/jjg-drive/" style="display: flex; flex-direction: column; gap: 14px; color: #2a2622;">
               <div style="position: relative; border: 3px solid #2a2622; background: #ece5d8; padding: 28px; display: grid; place-items: center; aspect-ratio: 4 / 3; overflow: hidden;">
                 <img src="/assets/jjg-drive.png" alt="JJG Drive" style="position: absolute; inset: 28px; width: calc(100% - 56px); height: calc(100% - 56px); object-fit: contain; box-sizing: border-box; filter: drop-shadow(2px 0 0 #2a2622) drop-shadow(-2px 0 0 #2a2622) drop-shadow(0 2px 0 #2a2622) drop-shadow(0 -2px 0 #2a2622) drop-shadow(0 14px 14px rgba(42,38,34,.35));">
-                <div style="position: absolute; right: 14px; top: 14px; padding: 8px 12px; background: #2a2622; color: #fbf7ee; border: 2px solid #2a2622; font-family: 'Patrick Hand SC', cursive; font-size: 13px; letter-spacing: .14em; line-height: 1.3;">FREE WITH JJG VOCALS</div>
+                
+                <div style="position: absolute; top: 30px; right: -54px; width: 230px; padding: 9px 0 7px; transform: rotate(45deg); background: #e0785c; color: #fbf7ee; border-top: 3px solid #2a2622; border-bottom: 3px solid #2a2622; text-align: center; font-family: 'Caveat Brush', cursive; font-size: 30px; line-height: 1; box-shadow: 0 4px 0 rgba(42,38,34,.25);">75% OFF</div>
+                
                 <div style="position: absolute; right: 14px; bottom: 14px; display: flex; align-items: center; gap: 8px; padding: 8px 14px; background: #e0785c; color: #fbf7ee; border: 2px solid #2a2622; font-family: 'Patrick Hand SC', cursive; font-size: 14px; letter-spacing: .14em;"><span style="display: inline-block; width: 0; height: 0; border-top: 7px solid transparent; border-bottom: 7px solid transparent; border-left: 11px solid currentColor;"></span>TRY IT, HEAR IT</div>
               </div>
               <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 12px;">
-                
-                
-                  <div style="align-self: stretch; margin-top: -14px; display: flex; align-items: center; justify-content: center; gap: 10px; padding: 9px 14px; background: #e0785c; color: #fbf7ee; border: 3px solid #2a2622; border-top: 0; box-shadow: 4px 4px 0 #2a2622; font-family: 'Caveat Brush', cursive; font-size: 26px; line-height: 1; text-shadow: 2px 2px 0 #2a2622; white-space: nowrap;">28-day free trial<span style="font-family: 'Patrick Hand SC', cursive; font-size: 12px; letter-spacing: .16em; text-shadow: none; color: #2a2622; padding: 3px 7px; background: #fbf7ee;">NO CARD</span></div>
-                
                 <div style="display: flex; align-items: baseline; flex-wrap: wrap; gap: 4px 14px;">
                   <div style="font-family: 'Caveat Brush', cursive; font-size: 34px; line-height: 1; white-space: nowrap;">JJG Drive</div>
                   <div style="font-size: 17px; color: #8a8378; white-space: nowrap;">preamp and tape</div>
@@ -232,12 +281,13 @@ h1[style*="font-weight: 400; white-space: nowrap"] { white-space: normal !import
                 <div style="display: flex; align-items: center; gap: 18px;">
                 <span style="display: flex; flex-direction: column; align-items: flex-start; gap: 5px; font-family: 'Patrick Hand SC', cursive; letter-spacing: .1em; white-space: nowrap;">
                   <span style="display: flex; align-items: baseline; gap: 6px; font-size: 14px; line-height: 1; color: #6b645b;">REG. <span style="position: relative; display: inline-block; padding: 0 2px; font-family: 'Caveat Brush', cursive; font-size: 30px; letter-spacing: 0; color: #6b645b;" class="af1">$20</span></span>
-                  <span style="font-size: 13px; line-height: 1; padding: 4px 8px 3px; background: #2a2622; color: #fbf7ee;">INTRO PRICE · SAVE $15</span>
+                  <span style="font-size: 13px; line-height: 1; padding: 4px 8px 3px; background: #2a2622; color: #fbf7ee;">BLACK FRIDAY · SAVE $15</span>
                 </span>
                 <span style="font-family: 'Caveat Brush', cursive; font-size: 60px; line-height: .85; color: #e0785c; white-space: nowrap;">$5</span>
                 </div>
               </div>
               <p style="margin: 0; font-size: 17px; line-height: 1.4; color: #4a443d; text-wrap: pretty;">The preamp and tape from JJG Vocals, on their own. One DRIVE knob, eight voicings, free if you own JJG Vocals.</p>
+              
             </a>
           
           <div style="border: 3px dashed #c9bda6; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; padding: 28px; aspect-ratio: 4 / 3; color: #8a8378; text-align: center;">
@@ -245,20 +295,21 @@ h1[style*="font-weight: 400; white-space: nowrap"] { white-space: normal !import
             <div style="font-size: 17px; line-height: 1.4;">Create an account and we’ll tell you first.</div>
           </div>
         </div>
-        <a href="/plugins/bundle/" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 28px; align-items: center; border: 3px solid #2a2622; background: #ecd3ae; padding: 28px; color: #2a2622; box-shadow: 6px 7px 0 #2a2622;" class="hv8">
+        <a href="/plugins/bundle/" style="position: relative; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 28px; align-items: center; border: 3px solid #2a2622; background: #ecd3ae; padding: 28px; color: #2a2622; box-shadow: 6px 7px 0 #2a2622;" class="hv8">
+          <div style="position: absolute; top: -26px; right: -18px; z-index: 2; width: 112px; height: 112px; border-radius: 50%; background: #e0785c; color: #fbf7ee; border: 3px solid #2a2622; box-shadow: 3px 3px 0 #2a2622; display: flex; flex-direction: column; align-items: center; justify-content: center; transform: rotate(10deg); font-family: 'Caveat Brush', cursive; line-height: .9;"><span style="font-size: 42px;">80%</span><span style="font-family: 'Patrick Hand SC', cursive; font-size: 16px; letter-spacing: .14em;">OFF</span></div>
           <div style="display: flex; flex-direction: column; gap: 10px;">
-            <div style="font-family: 'Patrick Hand SC', cursive; font-size: 13px; letter-spacing: .16em; color: #8a8378;">THE BUNDLE · INTRO PRICE</div>
+            <div style="font-family: 'Patrick Hand SC', cursive; font-size: 13px; letter-spacing: .16em; color: #8a8378;">THE BUNDLE · BLACK FRIDAY</div>
             <div style="font-family: 'Caveat Brush', cursive; font-size: 44px; line-height: 1;">The Everything Bagel</div>
-            <div style="font-size: 18px; line-height: 1.4; color: #4a443d; text-wrap: pretty;">JJG Vocals, Salt, Schmear and JJG Drive together, one price, and every plugin we add later at a discount for bundle owners.</div>
+            <div style="font-size: 18px; line-height: 1.4; color: #4a443d; text-wrap: pretty;">Every plugin for $52, the new Microwave included. That’s $23 less than buying JJG Vocals, Salt and Microwave on their own.</div>
             <div style="display: flex; align-items: center; gap: 18px;">
                 <span style="display: flex; flex-direction: column; align-items: flex-start; gap: 5px; font-family: 'Patrick Hand SC', cursive; letter-spacing: .1em; white-space: nowrap;">
-                  <span style="display: flex; align-items: baseline; gap: 6px; font-size: 17px; line-height: 1; color: #6b645b;">REG. <span style="position: relative; display: inline-block; padding: 0 2px; font-family: 'Caveat Brush', cursive; font-size: 36px; letter-spacing: 0; color: #6b645b;" class="af1">$200</span></span>
-                  <span style="font-size: 15px; line-height: 1; padding: 4px 8px 3px; background: #2a2622; color: #fbf7ee;">INTRO PRICE · SAVE $140</span>
+                  <span style="display: flex; align-items: baseline; gap: 6px; font-size: 17px; line-height: 1; color: #6b645b;">REG. <span style="position: relative; display: inline-block; padding: 0 2px; font-family: 'Caveat Brush', cursive; font-size: 36px; letter-spacing: 0; color: #6b645b;" class="af1">$259</span></span>
+                  <span style="font-size: 15px; line-height: 1; padding: 4px 8px 3px; background: #2a2622; color: #fbf7ee;">BLACK FRIDAY · SAVE $207</span>
                 </span>
-                <span style="font-family: 'Caveat Brush', cursive; font-size: 88px; line-height: .85; color: #e0785c; white-space: nowrap;">$60</span>
+                <span style="font-family: 'Caveat Brush', cursive; font-size: 88px; line-height: .85; color: #e0785c; white-space: nowrap;">$52</span>
             </div>
           </div>
-          <img src="/assets/pizza-bagel-four.png" alt="JJG Vocals, Schmear, Salt and JJG Drive" style="display: block; width: 100%; max-height: 360px; object-fit: contain;">
+          <img src="/assets/pizza-bagel-five.png" alt="JJG Vocals, JJG Drive, Microwave, Schmear and Salt" style="display: block; width: 100%; max-height: 360px; object-fit: contain;">
         </a>
       </section>
     
@@ -280,6 +331,8 @@ h1[style*="font-weight: 400; white-space: nowrap"] { white-space: normal !import
     
 
     
+
+    
   </main>
 
   <section style="border-top: 3px solid #2a2622; background: #fbf7ee;">
@@ -289,10 +342,12 @@ h1[style*="font-weight: 400; white-space: nowrap"] { white-space: normal !import
         <div style="font-size: 17px; line-height: 1.4; color: #4a443d; text-wrap: pretty;">New plugins, updates, and the occasional discount for people on the list. One email a month, tops.</div>
       </div>
       <div style="display: flex; gap: 0; flex: 1 1 320px; max-width: 460px;">
-        <form onsubmit="PB.subscribe(event, this)" style="display: contents;"><input type="email" name="email" placeholder="you@studio.com" autocomplete="email" required style="flex: 1; min-width: 0; padding: 12px 14px; border: 2.5px solid #2a2622; border-right: none; background: #fbf7ee; font-size: 18px; color: #2a2622; outline: none;"><button type="submit" style="padding: 12px 22px; background: #2a2622; color: #fbf7ee; border: 2.5px solid #2a2622; font-family: 'Patrick Hand SC', cursive; font-size: 16px; letter-spacing: .12em; cursor: pointer; user-select: none; white-space: nowrap;" class="hv4">SIGN UP</button></form>
+        <form onsubmit="PB.subscribe(event, this)" style="display: contents;"><input type="email" name="email" placeholder="you@studio.com" autocomplete="email" required style="flex: 1; min-width: 0; padding: 12px 14px; border: 2.5px solid #2a2622; border-right: none; background: #fbf7ee; font-size: 18px; color: #2a2622; outline: none;"><button type="submit" style="padding: 12px 22px; background: #2a2622; color: #fbf7ee; border: 2.5px solid #2a2622; font-family: 'Patrick Hand SC', cursive; font-size: 16px; letter-spacing: .12em; cursor: pointer; user-select: none; white-space: nowrap;" class="hv6">SIGN UP</button></form>
       </div>
     </div>
   </section>
+
+  
 
   <footer style="background: #2a2622; color: #fbf7ee; border-top: 3px solid #2a2622;">
     <div style="max-width: 1120px; margin: 0 auto; padding: 56px 24px 32px; display: grid; grid-template-columns: repeat(auto-fit, minmax(clamp(calc(25% - 30px), calc((760px - 100%) * 999), 100%), 1fr)); gap: 40px;">
@@ -453,7 +508,7 @@ h1[style*="font-weight: 400; white-space: nowrap"] { white-space: normal !import
           <div data-scratch-code style="padding: 18px 16px; border: 3px dashed #2a2622; background: #ecd3ae; text-align: center; font-family: 'Patrick Hand SC', cursive; font-size: 34px; letter-spacing: .16em; line-height: 1; user-select: all; overflow-wrap: anywhere;">__CODE__</div>
           <div style="display: flex; gap: 12px; flex-wrap: wrap;">
             <a href="#" data-scratch-copy style="flex: 1 1 140px; text-align: center; padding: 14px 18px; background: #fbf7ee; color: #2a2622; border: 2.5px solid #2a2622; font-family: 'Patrick Hand SC', cursive; font-size: 17px; letter-spacing: .12em; white-space: nowrap;" class="hv2">COPY CODE</a>
-            <a href="/plugins/" style="flex: 1 1 140px; text-align: center; padding: 14px 18px; background: #2a2622; color: #fbf7ee; border: 2.5px solid #2a2622; font-family: 'Patrick Hand SC', cursive; font-size: 17px; letter-spacing: .12em; white-space: nowrap;" class="hv4">SHOP THE SALE</a>
+            <a href="/plugins/" style="flex: 1 1 140px; text-align: center; padding: 14px 18px; background: #2a2622; color: #fbf7ee; border: 2.5px solid #2a2622; font-family: 'Patrick Hand SC', cursive; font-size: 17px; letter-spacing: .12em; white-space: nowrap;" class="hv6">SHOP THE SALE</a>
           </div>
           <div style="font-size: 15px; line-height: 1.45; color: #6b645b;">Enter the code at checkout. Good for 7 days.</div>
         
@@ -763,6 +818,7 @@ window.PBS = (function () {
   function maybeOpen() {
     var s = get();
     if (s) return;                              // already played or closed
+    if (!false) return;                  // 2026-11-15: the Black Friday canvas has the card off (scratchCard 'off')
     if (!document.getElementById('pbs-closed')) return;
     var banner = document.getElementById('pb-consent');
     var go = function () { setTimeout(open, 600); };
